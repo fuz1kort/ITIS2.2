@@ -1,4 +1,4 @@
-const PokemonHeader = () => {
+const SearchHeader = () => {
     return <header className="App-header">
         <img className="pokeball-image" src="/Pokeball.png" alt="Здесь должна быть картинка"/>
         <div className="search-main-div">
@@ -20,4 +20,4 @@ const PokemonHeader = () => {
     </header>
 }
 
-export default PokemonHeader;
+export default SearchHeader;

@@ -1,11 +1,11 @@
 import './App.css';
 import React from "react"
-import PokemonHeader from "./components/pokemonHeader.jsx";
+import SearchPage from "./views/SearchPage";
 
 function App() {
     return (
         <div className="App">
-            <PokemonHeader/>
+            <SearchPage/>
         </div>
     );
 }

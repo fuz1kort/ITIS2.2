@@ -75,4 +75,30 @@
     font-size: 25px;
 }
 
+#poke-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
+.pokemon-card {
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px 5px #0000001a;
+    margin: 20px 5px;
+    padding: 0 8px;
+}
+
+.ui {
+    margin: 10px;
+}
+
+.poke-image {
+    width: 80px;
+    height: 80px;
+}
+
+a {
+    text-decoration: none;
+}
