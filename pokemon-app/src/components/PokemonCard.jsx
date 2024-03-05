@@ -20,7 +20,7 @@ const PokemonCard = ({url}) => {
     if (!pokeData) {
             return <div></div>
     }
-    console.log(pokeData.types)
+    
     return (
         <Link to={`details/${pokeData.name}`}>
             <div className="pokemon-card">
@@ -36,7 +36,7 @@ const PokemonCard = ({url}) => {
                     <img alt={pokeData.name} className="card-image" src={pokeData.sprites.other.home.front_default}/>
                 </div>
                 <div className="card-footer">
-                        <PokemonTypes types={pokeData.types}/>)
+                        <PokemonTypes types={pokeData.types}/>
                 </div>
             </div>
         </Link>

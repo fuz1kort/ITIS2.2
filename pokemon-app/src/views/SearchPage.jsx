@@ -1,23 +1,35 @@
 import SearchHeader from "../components/SearchHeader";
 import PokemonsList from "../components/PokemonsList";
 import React, {useEffect, useState} from "react";
-import {all} from "axios";
 
 const SearchPage = () => {
     const [allPokemons, setAllPokemons] = useState([])
+    const [searchText, setSearchText] = useState('')
+    const [searchResults, setSearchResults] = useState([]);
     useEffect(() => {
         if (allPokemons.length === 0) {
-            fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+            fetch('https://pokeapi.co/api/v2/pokemon?limit=1000')
                 .then(response => response.json())
                 .then(data => setAllPokemons(data.results))
                 .catch(error => console.error('Error fetching data:', error));
         }
     }, [allPokemons]);
-    
-    return <div>
-        {/*<SearchHeader inputText={inputText} handleChange={handleChange} handleSubmit={handleSubmit}/>*/}
-        <SearchHeader/>
 
+    const handleChange = event => {
+        setSearchText(event.target.value)
+    }
+
+    const handleSubmit = () => {
+        const results = allPokemons.filter(pokemon =>
+            pokemon.name.includes(searchText)
+        );
+        setSearchResults(results);
+        setSearchText('')
+    }
+
+
+    return <div>
+        <SearchHeader inputText={searchText} handleChange={handleChange} handleSubmit={handleSubmit}/>
         {allPokemons.length === 0 ? (
             <div className='loading'>
                 <img alt='loading' src="/loading.gif"/>
