@@ -6,7 +6,7 @@ const PokemonsList = ({pokemons}) => {
         return (
             <div className="pokemon-list">
                 <div className="pokemon-list-wrapper">
-                    {pokemons.map(pokemon => (<PokemonCard url={pokemon.url} key={pokemon.id}/>))}
+                    {pokemons.map(pokemon => (<PokemonCard pokemon={pokemon} key={pokemon.id}/>))}
                 </div>
             </div>
         );

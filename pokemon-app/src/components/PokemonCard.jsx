@@ -1,42 +1,28 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
 import PokemonTypes from "./PokemonTypes";
 
-const PokemonCard = ({url}) => {
-    const [pokeData, setPokeData] = useState(null);
-
-    useEffect(() => {
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                setPokeData(data);
-            })
-            .catch((error) => {
-                console.log('There was an ERROR: ', error);
-            });
-    }, [url]);
-
-    
-    if (!pokeData) {
-            return <div></div>
+const PokemonCard = ({pokemon}) => {
+    if (!pokemon) {
+        return <div></div>
     }
-    
+
     return (
-        <Link to={`details/${pokeData.name}`}>
+        <Link to={`details/${pokemon.name}`}>
             <div className="pokemon-card">
                 <div className="card-header">
                     <div className="pokemon-name">
-                        {pokeData?.name[0].toUpperCase() + pokeData?.name.slice(1)}
+                        {pokemon?.name[0].toUpperCase() + pokemon?.name.slice(1)}
                     </div>
                     <div className="pokemon-id">
-                        #{pokeData?.id.toString().padStart(3, '0')}
+                        #{pokemon?.id.toString().padStart(3, '0')}
                     </div>
                 </div>
                 <div className="card-content">
-                    <img alt={pokeData.name} className="card-image" src={pokeData.sprites.other.home.front_default}/>
+                    <img alt={pokemon.name} className="card-image" src={pokemon.sprites.other.home.front_default}/>
                 </div>
                 <div className="card-footer">
-                        <PokemonTypes types={pokeData.types}/>
+                    <PokemonTypes types={pokemon.types}/>
                 </div>
             </div>
         </Link>
