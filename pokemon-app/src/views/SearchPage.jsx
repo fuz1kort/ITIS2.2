@@ -1,6 +1,7 @@
 import SearchHeader from "../components/SearchHeader";
 import PokemonsList from "../components/PokemonsList";
 import React, {useEffect, useState} from "react";
+import PokemonCard from "../components/PokemonCard";
 
 const SearchPage = () => {
     const [allPokemons, setAllPokemons] = useState([])
@@ -13,6 +14,13 @@ const SearchPage = () => {
                 .then(data => setAllPokemons(data.results))
                 .catch(error => console.error('Error fetching data:', error));
         }
+    }, [allPokemons]);
+
+    let parsedPokemons = allPokemons.((pokemon) => {
+        useEffect(() => {
+            fetch(pokemon.url)
+                .then(response => response.json())
+        });
     }, [allPokemons]);
 
     const handleChange = event => {
