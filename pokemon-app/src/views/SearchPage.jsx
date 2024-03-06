@@ -33,7 +33,6 @@ const SearchPage = () => {
                 })
                 .catch(error => console.error('Error fetching initial data:', error))
                 .finally(() => setFetching(false));
-
         }
     }, [fetching, offset]);
 
