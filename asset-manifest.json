@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ITIS2.2/pokemon-app/static/css/main.0dc13394.css",
+    "main.js": "/ITIS2.2/pokemon-app/static/js/main.70ada761.js",
+    "index.html": "/ITIS2.2/pokemon-app/index.html",
+    "main.0dc13394.css.map": "/ITIS2.2/pokemon-app/static/css/main.0dc13394.css.map",
+    "main.70ada761.js.map": "/ITIS2.2/pokemon-app/static/js/main.70ada761.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0dc13394.css",
+    "static/js/main.70ada761.js"
+  ]
+}
