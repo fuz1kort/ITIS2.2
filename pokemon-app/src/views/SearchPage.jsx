@@ -24,18 +24,31 @@ const SearchPage = () => {
 
     useEffect(() => {
         if (fetching) {
-            fetch(`https://pokeapi.co/api/v2/pokemon?limit=70&offset=${offset}`)
+            fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`)
                 .then(response => response.json())
                 .then(data => {
-                    data.results.forEach(pokemon => fetchPokemonData(pokemon));
-                    setOffset(prevOffset => prevOffset + 30);
+                    const promises = data.results.map(pokemon => fetchPokemonData(pokemon));
+                    Promise.all(promises).then(() => {
+                        setOffset(prevOffset => prevOffset + 10);
+                        checkIfFetchingNeeded();
+                    });
                 })
-                .catch(error => console.error('Error fetching initial data:', error))
-                .finally(() => setFetching(false));
+                .catch(error => console.error('Error fetching initial data:', error));
         }
-    }, [fetching, offset]);
+    }, [fetching, offset, searchText]);
 
-    const fetchPokemonData = (pokemon) => {
+    const checkIfFetchingNeeded = () => {
+        const visiblePokemons = Object.values(allPokemons).filter(pokemon =>
+            pokemon.name.includes(searchText.toLowerCase())
+        );
+        if (visiblePokemons.length <= 70) {
+            setFetching(true);
+        } else {
+            setFetching(false);
+        }
+    };
+
+    const fetchPokemonData = async (pokemon) => {
         fetch(pokemon.url)
             .then(response => response.json())
             .then(pokemonData => {
@@ -50,6 +63,7 @@ const SearchPage = () => {
 
     const handleChange = event => {
         setSearchText(event.target.value);
+        checkIfFetchingNeeded()
     };
 
     return (
