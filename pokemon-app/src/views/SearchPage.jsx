@@ -51,7 +51,7 @@ const SearchPage = () => {
         }
     };
 
-    const fetchPokemonData = (pokemon) => {
+    const fetchPokemonData = async (pokemon) => {
         fetch(pokemon.url)
             .then(response => response.json())
             .then(pokemonData => {
