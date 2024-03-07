@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ITIS2.2/static/css/main.0dc13394.css",
-    "main.js": "/ITIS2.2/static/js/main.70ada761.js",
+    "main.js": "/ITIS2.2/static/js/main.cfd76917.js",
     "index.html": "/ITIS2.2/index.html",
     "main.0dc13394.css.map": "/ITIS2.2/static/css/main.0dc13394.css.map",
-    "main.70ada761.js.map": "/ITIS2.2/static/js/main.70ada761.js.map"
+    "main.cfd76917.js.map": "/ITIS2.2/static/js/main.cfd76917.js.map"
   },
   "entrypoints": [
     "static/css/main.0dc13394.css",
-    "static/js/main.70ada761.js"
+    "static/js/main.cfd76917.js"
   ]
 }
