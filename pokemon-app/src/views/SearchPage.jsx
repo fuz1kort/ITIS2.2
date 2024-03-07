@@ -4,7 +4,6 @@ import PokemonsList from "../components/PokemonsList";
 
 const SearchPage = () => {
     const [allPokemons, setAllPokemons] = useState([]);
-    const [searchResults, setSearchResults] = useState([]);
     const [searchText, setSearchText] = useState('');
     const [offset, setOffset] = useState(0);
     const [fetching, setFetching] = useState(true)
@@ -18,7 +17,7 @@ const SearchPage = () => {
     })
 
     const scrollHandler = (e) => {
-        if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 200 && !fetching) {
+        if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 300 && !fetching) {
             setFetching(true)
         }
     }
@@ -40,22 +39,10 @@ const SearchPage = () => {
         fetch(pokemon.url)
             .then(response => response.json())
             .then(pokemonData => {
-                    if (!searchText) {
-                        setAllPokemons(prevAllPokemons => ({
-                            ...prevAllPokemons,
-                            [pokemonData.id]: pokemonData
-                        }));
-                    } else {
-                        if (pokemonData.name.includes(searchText.toLowerCase())) {
-                            setSearchResults(prevAllPokemons => ({
-                                ...prevAllPokemons,
-                                [pokemonData.id]: pokemonData
-                            }))
-                            console.log("Падла сука блять")
-                            console.log(searchResults.length)
-                        }
-                    }
-
+                    setAllPokemons(prevAllPokemons => ({
+                        ...prevAllPokemons,
+                        [pokemonData.id]: pokemonData
+                    }));
                 }
             )
             .catch(error => console.error('Error fetching data for', pokemon.name, ':', error))
@@ -65,27 +52,16 @@ const SearchPage = () => {
         setSearchText(event.target.value);
     };
 
-    const handleSubmit = () => {
-        if (searchText) {
-            const results = Object.values(allPokemons).filter(pokemon =>
-                pokemon.name.includes(searchText.toLowerCase())
-            );
-
-            setSearchResults(results);
-        } else {
-            setSearchResults([])
-        }
-    };
-
     return (
         <div>
-            <SearchHeader inputText={searchText} handleChange={handleChange} handleSubmit={handleSubmit}/>
+            <SearchHeader inputText={searchText} handleChange={handleChange}/>
             {allPokemons.length === 0 ? (
                 <div className='loading'>
                     <img alt='loading' src="/loading.gif"/>
                 </div>
             ) : (
-                <PokemonsList pokemons={searchResults.length ? searchResults : Object.values(allPokemons)}/>
+                <PokemonsList pokemons={Object.values(allPokemons).filter(pokemon =>
+                    pokemon.name.includes(searchText.toLowerCase()))}/>
             )}
         </div>
     );
