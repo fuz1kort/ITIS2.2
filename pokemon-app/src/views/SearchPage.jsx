@@ -18,7 +18,7 @@ const SearchPage = () => {
     })
 
     const scrollHandler = (e) => {
-        if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 600 && !fetching) {
+        if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 200 && !fetching) {
             setFetching(true)
         }
     }
@@ -36,21 +36,28 @@ const SearchPage = () => {
         }
     }, [fetching, offset]);
 
-    const fetchPokemonData = async (pokemon) => {
+    const fetchPokemonData = (pokemon) => {
         fetch(pokemon.url)
             .then(response => response.json())
             .then(pokemonData => {
-                setAllPokemons(prevAllPokemons => ({
-                    ...prevAllPokemons,
-                    [pokemonData.id]: pokemonData
-                }));
-                if (!searchText) {
-                    setSearchResults(prevAllPokemons => ({
-                        ...prevAllPokemons,
-                        [pokemonData.id]: pokemonData
-                    }));
+                    if (!searchText) {
+                        setAllPokemons(prevAllPokemons => ({
+                            ...prevAllPokemons,
+                            [pokemonData.id]: pokemonData
+                        }));
+                    } else {
+                        if (pokemonData.name.includes(searchText.toLowerCase())) {
+                            setSearchResults(prevAllPokemons => ({
+                                ...prevAllPokemons,
+                                [pokemonData.id]: pokemonData
+                            }))
+                            console.log("Падла сука блять")
+                            console.log(searchResults.length)
+                        }
+                    }
+
                 }
-            })
+            )
             .catch(error => console.error('Error fetching data for', pokemon.name, ':', error))
     };
 
@@ -59,19 +66,16 @@ const SearchPage = () => {
     };
 
     const handleSubmit = () => {
-        const results = Object.values(allPokemons).filter(pokemon =>
-            pokemon.name.includes(searchText.toLowerCase())
-        );
-        setSearchResults(results);
-    };
+        if (searchText) {
+            const results = Object.values(allPokemons).filter(pokemon =>
+                pokemon.name.includes(searchText.toLowerCase())
+            );
 
-    if (allPokemons.length === 0) {
-        return (
-            <div className='loading'>
-                <img alt='loading' src="/loading.gif"/>
-            </div>
-        )
-    }
+            setSearchResults(results);
+        } else {
+            setSearchResults([])
+        }
+    };
 
     return (
         <div>
