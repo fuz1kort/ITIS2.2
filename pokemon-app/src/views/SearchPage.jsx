@@ -24,7 +24,7 @@ const SearchPage = () => {
 
     useEffect(() => {
         if (fetching) {
-            fetch(`https://pokeapi.co/api/v2/pokemon?limit=60&offset=${offset}`)
+            fetch(`https://pokeapi.co/api/v2/pokemon?limit=70&offset=${offset}`)
                 .then(response => response.json())
                 .then(data => {
                     data.results.forEach(pokemon => fetchPokemonData(pokemon));
