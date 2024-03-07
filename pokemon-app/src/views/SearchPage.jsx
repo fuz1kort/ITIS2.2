@@ -25,11 +25,11 @@ const SearchPage = () => {
 
     useEffect(() => {
             if (fetching) {
-                fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`)
+                fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`)
                     .then(response => response.json())
                     .then(data => {
                         data.results.map(pokemon => fetchPokemonData(pokemon));
-                        setOffset(prevOffset => prevOffset + 30)
+                        setOffset(prevOffset => prevOffset + 20)
                         checkIfFetchingNeeded()
                     })
                     .catch(error => console.error('Error fetching initial data:', error));
@@ -69,6 +69,8 @@ const SearchPage = () => {
     useEffect(() => {
         checkIfFetchingNeeded();
     }, [searchText]);
+    
+    console.log(Object.values(allPokemons).length)
 
     return (
         <div>
