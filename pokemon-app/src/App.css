@@ -4,6 +4,11 @@
 
 a {
     text-decoration: none;
+    max-width: 50%;
+}
+
+body {
+    position: relative
 }
 
 *   {
@@ -21,21 +26,20 @@ a {
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    width: 100%;
+    max-height: 250px;
 }
 
 .pokeball-image {
-    width: 200px;
+    width: calc(80px + 2vmin);
     position: absolute;
-    right: -40px;
-    top: -40px;
+    right: -25px;
+    top: -20px;
     opacity: .7;
 }
 
 .search-main-div {
-    margin: 50px 0 50px 0;
-    width: 60%;
-    height: 100%;
+    margin: 30px 10px;
+    min-width: 50%;
 }
 
 .label-div {
@@ -44,25 +48,27 @@ a {
 }
 
 .label {
-    font-size: 70px;
+    font-size: calc(25px + 2vmin);
     text-align: left;
+    margin-right: 50px;
 }
 
 .search-div {
-    margin: 40px 0 40px 0;
+    margin: 20px 0 5px 0;
     background-color: white;
     border-radius: 40px;
     display: flex;
     justify-content: space-between;
-    height: 75px;
+    height: calc(35px + 2vmin)
 }
 
 .search-image {
     margin: auto 0 auto 20px;
+    height: calc(30px + 2vmin)
 }
 
 .search-input {
-    font-size: 28px;
+    font-size: calc(7px + 1.5vmin);
     margin: 0 5px 0 20px;
     outline: none;
     border: none;
@@ -72,20 +78,32 @@ a {
 .search-button {
     background-color: black;
     border-radius: 40px;
-    min-width: 120px;
+    width: calc(100px + 1.5vmin);
     color: white;
     border: none;
     margin: 2px 2px 2px 2px;
-    height: 95%;
-    font-size: 25px;
+    height: calc(30px + 2vmin);
+    font-size: calc(10px + 1.5vmin);
 }
 
 .pokemon-list-wrapper {
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding: 0 1%;
+}
+
+.pokemon-card {
+    box-shadow: rgba(0,0,0,0.1) 0 5px 5px 5px;
+    margin: 20px 5px;
+    border-radius: 10px;
+    padding: 0 8px;
+    align-items: center;
+}
+
+.card-content{
+    display: flex;
+    justify-content: center;
 }
 
 .card-header {
@@ -96,31 +114,11 @@ a {
     align-items: center;
 }
 
-.card-image {
-    max-width: 130px;
-    max-height: 160px;
-    min-width: 80px;
-    min-height: 80px;
-    border-radius: 10px;
-}
-
-.pokemon-card {
-    box-shadow: rgba(0,0,0,0.1) 0 5px 5px 5px;
-    margin: 20px 5px;
-    border-radius: 10px;
-    padding: 0 8px;
-    align-items: center;
-    min-height: 100px;
-}
-
-.card-footer {
-    display: flex;
-    justify-content: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    color: white;
-    height: 100%;
-    min-height: 30px;
+.pokemon-name {
+    color: rgba(7, 42, 200, 1);
+    font-family: "Poppins", sans-serif;
+    padding: 3px 3px;
+    font-size: 12px;
 }
 
 .pokemon-id {
@@ -131,11 +129,22 @@ a {
     padding: 3px 4px;
 }
 
-.pokemon-name {
-    color: rgba(7, 42, 200, 1);
-    font-family: "Poppins", sans-serif;
-    padding: 3px 4px;
-    font-size: 12px;
+.card-image {
+    max-width: 130px;
+    max-height: 160px;
+    min-width: 80px;
+    min-height: 80px;
+    border-radius: 10px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+    height: 100%;
+    min-height: 30px;
 }
 
 .pokemon-types {
@@ -146,11 +155,6 @@ a {
     display: flex;
     justify-content: space-between;
     width: 90%;
-}
-
-.card-content{
-    display: flex;
-    justify-content: center;
 }
 
 .not-found {
@@ -175,4 +179,22 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .pokemon-card {
+        width: calc(100% - 10px);
+    }
+}
+
+/* Стили для планшетов */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    a {
+        max-width: 15%;
+    }
+    
+    .pokemon-card {
+        width: calc(90% - 7px);
+        white-space: nowrap;
+    }
 }
