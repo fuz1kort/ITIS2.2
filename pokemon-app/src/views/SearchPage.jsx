@@ -70,8 +70,6 @@ const SearchPage = () => {
         checkIfFetchingNeeded();
     }, [searchText]);
     
-    console.log(Object.values(allPokemons).length)
-
     return (
         <div>
             <SearchHeader inputText={searchText} handleChange={handleChange}/>
