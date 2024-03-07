@@ -42,9 +42,7 @@ const SearchPage = () => {
         const visiblePokemons = Object.values(allPokemons).filter(pokemon =>
             pokemon.name.includes(searchText.toLowerCase())
         );
-        console.log(visiblePokemons.length)
         if (visiblePokemons.length <= 70) {
-            console.log("ЕЩЕ")
             setFetching(true);
         } else {
             setFetching(false);
@@ -66,13 +64,11 @@ const SearchPage = () => {
 
     const handleChange = event => {
         setSearchText(event.target.value);
-        checkIfFetchingNeeded()
     };
 
     useEffect(() => {
-        console.log(searchText); // Теперь это будет выводить текущее значение searchText после его обновления
-        checkIfFetchingNeeded(); // Вызов функции проверки после обновления searchText
-    }, [searchText]); // Добавляем searchText в массив зависимостей
+        checkIfFetchingNeeded();
+    }, [searchText]);
 
     return (
         <div>
