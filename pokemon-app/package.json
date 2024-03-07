@@ -1,5 +1,5 @@
 {
-  "homepage": "https://fuz1kort.github.io/ITIS2.2/pokemon-app/",
+  "homepage": "https://fuz1kort.github.io/ITIS2.2/",
   "name": "pokemon-app",
   "version": "0.1.0",
   "private": true,
@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
