@@ -18,7 +18,7 @@ const SearchPage = () => {
     })
 
     const scrollHandler = (e) => {
-        if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100 && !fetching) {
+        if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 200 && !fetching) {
             setFetching(true)
         }
     }
@@ -29,7 +29,7 @@ const SearchPage = () => {
                     .then(response => response.json())
                     .then(data => {
                         data.results.map(pokemon => fetchPokemonData(pokemon));
-                        setOffset(prevOffset => prevOffset + 10)
+                        setOffset(prevOffset => prevOffset + 20)
                         checkIfFetchingNeeded()
                     })
                     .catch(error => console.error('Error fetching initial data:', error));
@@ -49,7 +49,7 @@ const SearchPage = () => {
         }
     };
 
-    const fetchPokemonData = async (pokemon) => {
+    const fetchPokemonData = (pokemon) => {
         fetch(pokemon.url)
             .then(response => response.json())
             .then(pokemonData => {
