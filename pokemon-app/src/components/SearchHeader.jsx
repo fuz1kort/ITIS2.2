@@ -1,6 +1,8 @@
+import pokeball from  "../assets/Pokeball.png"
+
 const SearchHeader = ({inputText, handleChange, handleSubmit}) => {
     return <header className="App-header">
-        <img className="pokeball-image" src="/Pokeball.png" alt="Здесь должна быть картинка"/>
+        <img className="pokeball-image" src={pokeball} alt="Здесь должна быть картинка"/>
         <div className="search-main-div">
             <div className="label-div">
                 <label className="label">Who are you looking for?</label>
