@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="init deploy v2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="added adaptive v2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,24 +53,29 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2dMiV2AxNGga1eL2FdyXgPUWHt9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.platform.ide.impl.presentationAssistant.PresentationAssistantConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Marat/source/repos/fuz1kort/ITIS2.2/pokemon-app/src/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "discord-application",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -81,6 +84,11 @@
         <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\assets" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -99,6 +107,7 @@
       <updated>1709824369426</updated>
       <workItem from="1709824371804" duration="1846000" />
       <workItem from="1709826799176" duration="668000" />
+      <workItem from="1709845137157" duration="11038000" />
     </task>
     <task id="LOCAL-00001" summary="init deploy">
       <option name="closed" value="true" />
@@ -116,7 +125,95 @@
       <option name="project" value="LOCAL" />
       <updated>1709825211363</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="deploy v3">
+      <option name="closed" value="true" />
+      <created>1709845828508</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709845828508</updated>
+    </task>
+    <task id="LOCAL-00004" summary="deploy v4">
+      <option name="closed" value="true" />
+      <created>1709847108599</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709847108599</updated>
+    </task>
+    <task id="LOCAL-00005" summary="deploy v5">
+      <option name="closed" value="true" />
+      <created>1709849396577</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709849396577</updated>
+    </task>
+    <task id="LOCAL-00006" summary="deploy v5.1">
+      <option name="closed" value="true" />
+      <created>1709849523709</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709849523709</updated>
+    </task>
+    <task id="LOCAL-00007" summary="deploy v6">
+      <option name="closed" value="true" />
+      <created>1709849808290</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709849808290</updated>
+    </task>
+    <task id="LOCAL-00008" summary="deploy v7">
+      <option name="closed" value="true" />
+      <created>1709850065005</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709850065005</updated>
+    </task>
+    <task id="LOCAL-00009" summary="deploy v8">
+      <option name="closed" value="true" />
+      <created>1709850253383</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709850253383</updated>
+    </task>
+    <task id="LOCAL-00010" summary="deploy v9">
+      <option name="closed" value="true" />
+      <created>1709850607803</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709850607803</updated>
+    </task>
+    <task id="LOCAL-00011" summary="deploy pre-alfa">
+      <option name="closed" value="true" />
+      <created>1709850795959</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709850795959</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added adaptive">
+      <option name="closed" value="true" />
+      <created>1709855894210</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709855894210</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added adaptive v2">
+      <option name="closed" value="true" />
+      <created>1709856089168</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709856089168</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +233,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init deploy" />
     <MESSAGE value="init deploy v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="init deploy v2" />
+    <MESSAGE value="deploy v3" />
+    <MESSAGE value="deploy v4" />
+    <MESSAGE value="deploy v5" />
+    <MESSAGE value="deploy v5.1" />
+    <MESSAGE value="deploy v6" />
+    <MESSAGE value="deploy v7" />
+    <MESSAGE value="deploy v8" />
+    <MESSAGE value="deploy v9" />
+    <MESSAGE value="deploy pre-alfa" />
+    <MESSAGE value="added adaptive" />
+    <MESSAGE value="added adaptive v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="added adaptive v2" />
   </component>
 </project>
