@@ -190,7 +190,7 @@ body {
 /* Стили для планшетов */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     a {
-        max-width: 15%;
+        max-width: 20%;
     }
     
     .pokemon-card {
