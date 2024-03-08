@@ -34,7 +34,7 @@ body {
     position: absolute;
     right: -25px;
     top: -20px;
-    opacity: .7;
+    opacity: .4;
 }
 
 .search-main-div {
@@ -181,9 +181,38 @@ body {
     justify-content: center;
 }
 
+.pokemon-header {
+    background-color: #072AC8;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+}
+
+.arrow-back {
+    width: 7%;
+    margin: calc(25% - 27px);
+}
+
+.pokemon-header-pokeball-image {
+    width: calc(80px + 2vmin);
+    position: absolute;
+    right: 20px;
+    top: -20px;
+    opacity: .4;
+}
+
 @media only screen and (max-width: 767px) {
     .pokemon-card {
         width: calc(100% - 10px);
+    }
+
+    .arrow-back {
+        margin: calc(25% - 32px);
+    }
+
+    .pokemon-header-pokeball-image {
+        top: -16px;
     }
 }
 
@@ -196,5 +225,9 @@ body {
     .pokemon-card {
         width: calc(90% - 7px);
         white-space: nowrap;
+    }
+
+    .pokemon-header-pokeball-image {
+        top: -10px;
     }
 }

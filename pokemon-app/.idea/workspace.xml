@@ -4,11 +4,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="added adaptive v2" />
+    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="added adaptive v2">
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Bug.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Dragon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Electric.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Fairy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Fight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Fire.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Flying.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Ghost.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Grass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Ground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Ice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Poison.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Psychic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Rock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Steel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Types/Water.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/AbilitiesInfo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/BreedingInfo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/MovesInfo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/PokemonInfo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/InfoBlocks.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/InfoBlocks.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/PokemonHeader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/statColors.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/typeImages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/PokemonPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NotFound.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchPokemonPage/NotFound.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchPokemonPage/PokemonCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonTypes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonTypes/PokemonTypes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchPokemonPage/PokemonsList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchPokemonPage/SearchHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/typesToColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/typesToColors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SearchPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPage.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -62,10 +111,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/Marat/source/repos/fuz1kort/ITIS2.2/pokemon-app/src/assets",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,6 +140,13 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\assets" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\components\PokemonTypes" />
+      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\components\PokemonInfoPage\Blocks" />
+      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\components\PokemonInfoPage" />
+      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\components\SearchPokemonPage" />
+      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\components\Pokemons" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -108,6 +166,7 @@
       <workItem from="1709824371804" duration="1846000" />
       <workItem from="1709826799176" duration="668000" />
       <workItem from="1709845137157" duration="11038000" />
+      <workItem from="1709906275745" duration="11119000" />
     </task>
     <task id="LOCAL-00001" summary="init deploy">
       <option name="closed" value="true" />
@@ -231,6 +290,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init deploy" />
     <MESSAGE value="init deploy v2" />
     <MESSAGE value="deploy v3" />
