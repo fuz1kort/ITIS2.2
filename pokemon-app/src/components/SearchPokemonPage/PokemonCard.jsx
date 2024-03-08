@@ -8,7 +8,7 @@ const PokemonCard = ({pokemon}) => {
     }
 
     return (
-        <Link to={pokemon.name}>
+        <Link to={`/pokemon/${pokemon.name}`}>
             <div className="pokemon-card">
                 <div className="card-header">
                     <div className="pokemon-name">
