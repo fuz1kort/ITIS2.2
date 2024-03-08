@@ -1,6 +1,4 @@
-import {useEffect, useState} from "react";
-import typeImages from "../../../utils/typeImages";
-import typeToColors from "../../../utils/typesToColors";
+import {PokemonMoveCard} from "./PokemonMoveCard";
 
 const MovesInfo = ({moves}) => {
     if (!moves) {
@@ -27,23 +25,3 @@ const MovesInfo = ({moves}) => {
 
 export default MovesInfo
 
-const PokemonMoveCard = ({name, url}) => {
-    const [type, setType] = useState('')
-    if (name.includes('-'))
-        name = name.split('-').join(' ')
-
-    useEffect(() => {
-        fetch(url)
-            .then(response => response.json())
-            .then(json => setType(json.type.name))
-    }, []);
-
-    return (
-        <div
-            style={{backgroundColor: typeToColors[type]}}
-            className="pokemon-move-card">
-            <img src={typeImages[type]} alt={type}/>
-            <p>{name}</p>
-        </div>
-    )
-}

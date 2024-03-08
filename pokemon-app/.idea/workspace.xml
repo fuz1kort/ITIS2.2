@@ -4,46 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="added adaptive v2">
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Bug.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Dragon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Electric.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Fairy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Fight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Fire.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Flying.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Ghost.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Grass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Ground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Ice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Poison.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Psychic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Rock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Steel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Types/Water.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/AbilitiesInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/BreedingInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/MovesInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/PokemonInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/InfoBlocks.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/InfoBlocks.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/PokemonHeader.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/statColors.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/typeImages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/PokemonPage.jsx" afterDir="false" />
+    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="making detailed page">
+      <change afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/PokemonMoveCard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotFound.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchPokemonPage/NotFound.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchPokemonPage/PokemonCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonTypes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonTypes/PokemonTypes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchPokemonPage/PokemonsList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchPokemonPage/SearchHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/typesToColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/typesToColors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SearchPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/AbilitiesInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/AbilitiesInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/MovesInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/MovesInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonInfoPage/InfoBlocks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/InfoBlocks.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +132,7 @@
       <workItem from="1709824371804" duration="1846000" />
       <workItem from="1709826799176" duration="668000" />
       <workItem from="1709845137157" duration="11038000" />
-      <workItem from="1709906275745" duration="11119000" />
+      <workItem from="1709906275745" duration="13354000" />
     </task>
     <task id="LOCAL-00001" summary="init deploy">
       <option name="closed" value="true" />
@@ -272,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709856089168</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="making detailed page">
+      <option name="closed" value="true" />
+      <created>1709920652149</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709920652149</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +278,7 @@
     <MESSAGE value="deploy pre-alfa" />
     <MESSAGE value="added adaptive" />
     <MESSAGE value="added adaptive v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="added adaptive v2" />
+    <MESSAGE value="making detailed page" />
+    <option name="LAST_COMMIT_MESSAGE" value="making detailed page" />
   </component>
 </project>
