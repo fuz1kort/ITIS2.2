@@ -69,18 +69,20 @@ const SearchPage = () => {
     useEffect(() => {
         checkIfFetchingNeeded();
     }, [searchText]);
-    
+
     return (
         <div>
             <SearchHeader inputText={searchText} handleChange={handleChange}/>
-            {allPokemons.length === 0 ? (
-                <div className='loading'>
-                    <img alt='loading' src={loading}/>
-                </div>
-            ) : (
-                <PokemonsList pokemons={Object.values(allPokemons).filter(pokemon =>
-                    pokemon.name.includes(searchText.toLowerCase()))}/>
-            )}
+            <div className="search-page-content">
+                {allPokemons.length === 0 ? (
+                    <div className='loading'>
+                        <img alt='loading' src={loading}/>
+                    </div>
+                ) : (
+                    <PokemonsList pokemons={Object.values(allPokemons).filter(pokemon =>
+                        pokemon.name.includes(searchText.toLowerCase()))}/>
+                )}
+            </div>
         </div>
     );
 }
