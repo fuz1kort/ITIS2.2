@@ -4,34 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="added detailed page&#10;need styles">
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/.idea/.idea.Pokemons API/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/.idea/.idea.Pokemons API/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/.idea/.idea.Pokemons API/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/.idea/.idea.Pokemons API/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/.idea/.idea.Pokemons API/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemon API Test/obj/Debug/net8.0/Pokemon API Test.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemon API Test/obj/Debug/net8.0/Pokemon API Test.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemon API Test/obj/Pokemon API Test.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemon API Test/obj/Pokemon API Test.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemon API Test/obj/Pokemon API Test.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemon API Test/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemon API Test/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemon API Test/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemon API Test/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemons API/obj/Debug/net8.0/Pokemons API.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemons API/obj/Debug/net8.0/Pokemons API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemons API/obj/Pokemons API.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemons API/obj/Pokemons API.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemons API/obj/Pokemons API.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemons API/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemons API/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemons API/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Pokemons API/Pokemons API/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pokemons API/Pokemons API/Pokemons API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Pokemons API/Pokemons API/Pokemons API.csproj" afterDir="false" />
+    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="changes in UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/SearchPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +124,7 @@
       <workItem from="1709826799176" duration="668000" />
       <workItem from="1709845137157" duration="11038000" />
       <workItem from="1709906275745" duration="14437000" />
-      <workItem from="1709966272172" duration="2643000" />
+      <workItem from="1709966272172" duration="4389000" />
     </task>
     <task id="LOCAL-00001" summary="init deploy">
       <option name="closed" value="true" />
@@ -303,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709929836235</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="changes in UI">
+      <option name="closed" value="true" />
+      <created>1709969297676</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1709969297676</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +321,7 @@
     <MESSAGE value="making detailed page" />
     <MESSAGE value="added detailed page&#10;need styles" />
     <MESSAGE value="починить пагинацию при поиске" />
-    <option name="LAST_COMMIT_MESSAGE" value="починить пагинацию при поиске" />
+    <MESSAGE value="changes in UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in UI" />
   </component>
 </project>

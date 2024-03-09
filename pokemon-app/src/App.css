@@ -11,6 +11,11 @@ body {
     position: relative
 }
 
+.search-page-content {
+    display: flex;
+    justify-content: center;
+}
+
 .loading {
     margin-top: 100px;
 }
