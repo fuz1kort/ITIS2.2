@@ -2,11 +2,13 @@ import loading from "../assets/loading.gif"
 import SearchHeader from "../components/SearchPokemonPage/SearchHeader";
 import React, {useEffect, useState} from "react";
 import PokemonsList from "../components/SearchPokemonPage/PokemonsList";
+import NotFound from "../components/SearchPokemonPage/NotFound";
 
 const SearchPage = () => {
     const [allPokemons, setAllPokemons] = useState([]);
     const [searchResults, setSearchResults] = useState([]);
     const [searchText, setSearchText] = useState('');
+    const [isSearching, setAsSearching] = useState(false);
     const [offset, setOffset] = useState(0);
     const [fetching, setFetching] = useState(true)
 
@@ -44,6 +46,10 @@ const SearchPage = () => {
             const visiblePokemons = Object.values(allPokemons).filter(pokemon =>
                 pokemon.name.includes(searchText.toLowerCase())
             );
+
+            if (visiblePokemons.length === 0) {
+                return
+            }
             if (visiblePokemons.length <= 70) {
                 setFetching(true);
             } else {
@@ -84,7 +90,8 @@ const SearchPage = () => {
         setSearchText(event.target.value);
     };
 
-    const handleSubmit = event => {
+    const handleSubmit = () => {
+        setAsSearching(true)
         if (searchText) {
             let results = Object.values(allPokemons).filter(pokemon =>
                 pokemon.name.includes(searchText.toLowerCase()))
@@ -92,22 +99,36 @@ const SearchPage = () => {
         } else {
             setSearchResults([])
             setAllPokemons([])
+            setAsSearching(false)
+            setFetching(true)
+            setOffset(0)
         }
-
-        checkIfFetchingNeeded();
     };
+
+    useEffect(() => {
+        console.log(isSearching)
+        checkIfFetchingNeeded();
+    }, [searchResults]);
 
     return (
         <div>
             <SearchHeader inputText={searchText} handleChange={handleChange} handleSubmit={handleSubmit}/>
             <div className="search-page-content">
-                {allPokemons.length === 0 ? (
-                    <div className='loading'>
-                        <img alt='loading' src={loading}/>
-                    </div>
+                {searchResults.length === 0 ? (
+                    allPokemons.length === 0 ? (
+                        <div className='loading'>
+                            <img alt='loading' src={loading}/>
+                        </div>
+                    ) : (
+                        isSearching ? (
+                            <NotFound/>
+                        ) : (
+                            <PokemonsList
+                                pokemons={Object.values(allPokemons)}/>
+                        )
+                    )
                 ) : (
-                    <PokemonsList
-                        pokemons={searchResults.length === 0 ? Object.values(allPokemons) : Object.values(searchResults)}/>
+                    <PokemonsList pokemons={Object.values(searchResults)}/>
                 )}
             </div>
         </div>

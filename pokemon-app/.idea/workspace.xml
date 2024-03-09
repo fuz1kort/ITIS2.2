@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="changes in UI">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SearchPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPage.jsx" afterDir="false" />
+    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="added detailed page&#10;need styles">
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonInfoPage/PokemonHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonInfoPage/PokemonHeader.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,24 +71,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Marat/source/repos/fuz1kort/ITIS2.2/pokemon-app/src/assets&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;discord-application&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Marat/source/repos/fuz1kort/ITIS2.2/pokemon-app/src/assets",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "discord-application",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -112,6 +110,13 @@
       <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\components\Pokemons" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-985749b364ce-JavaScript-WS-233.14475.40" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -124,7 +129,6 @@
       <workItem from="1709826799176" duration="668000" />
       <workItem from="1709845137157" duration="11038000" />
       <workItem from="1709906275745" duration="14437000" />
-      <workItem from="1709966272172" duration="4389000" />
     </task>
     <task id="LOCAL-00001" summary="init deploy">
       <option name="closed" value="true" />
@@ -278,15 +282,7 @@
       <option name="project" value="LOCAL" />
       <updated>1709929836235</updated>
     </task>
-    <task id="LOCAL-00020" summary="changes in UI">
-      <option name="closed" value="true" />
-      <created>1709969297676</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1709969297676</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,8 +316,6 @@
     <MESSAGE value="added adaptive v2" />
     <MESSAGE value="making detailed page" />
     <MESSAGE value="added detailed page&#10;need styles" />
-    <MESSAGE value="починить пагинацию при поиске" />
-    <MESSAGE value="changes in UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="added detailed page&#10;need styles" />
   </component>
 </project>

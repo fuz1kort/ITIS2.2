@@ -95,6 +95,10 @@ body {
     font-size: calc(10px + 1.5vmin);
 }
 
+.pokemon-list {
+    width: 100%;
+}
+
 .pokemon-list-wrapper {
     display: flex;
     justify-content: space-around;
