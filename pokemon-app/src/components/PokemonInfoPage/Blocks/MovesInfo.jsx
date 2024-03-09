@@ -13,9 +13,12 @@ const MovesInfo = ({moves}) => {
                 <div className="info-card-header">
                     <h2>Moves</h2>
                 </div>
-                <div className="info-card-content">
+                <div className="moves-container">
                     <div className="moves-list">
-                        {moves.map(i => <PokemonMoveCard name={i.name} url={i.url}/>)}
+                        {moves.slice(0, 3).map((move) => <PokemonMoveCard name={move.name} url={move.url} key={move.name} />)}
+                    </div>
+                    <div className="moves-list">
+                        {moves.slice(3, 6).map((move) => <PokemonMoveCard name={move.name} url={move.url} key={move.name}/>)}
                     </div>
                 </div>
             </div>

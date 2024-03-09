@@ -2,7 +2,7 @@ const BreedingInfo = (props) => {
     if (!props) {
         return <div></div>
     }
-    
+
     let weight = props.weight
     let height = props.height
     const meters = (height / 10).toFixed(1);
@@ -25,21 +25,19 @@ const BreedingInfo = (props) => {
                 <div className="info-card-header">
                     <h2>Breeding</h2>
                 </div>
-                <div className="info-card-content">
-                    <div className="info-card-stats">
-                        <div className="height">
-                            <h4>Height</h4>
-                            <div className="height-stats">
-                                <span>{feetAndInches}</span>
-                                <span>{meters} m</span>
-                            </div>
+                <div className="height-weight-div">
+                    <div className="stats">
+                        <h4>Height</h4>
+                        <div className="height-weight-stats">
+                            <span>{feetAndInches}</span>
+                            <span>{meters} m</span>
                         </div>
-                        <div className="weight">
-                            <h4>Weight</h4>
-                            <div className="weight-stats">
-                                <span>{lbs} lbs</span>
-                                <span>{kg} kg</span>
-                            </div>
+                    </div>
+                    <div className="stats">
+                        <h4>Weight</h4>
+                        <div className="height-weight-stats">
+                            <span>{lbs} lbs</span>
+                            <span>{kg} kg</span>
                         </div>
                     </div>
                 </div>

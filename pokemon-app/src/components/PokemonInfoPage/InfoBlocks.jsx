@@ -23,7 +23,7 @@ const InfoBlocks = (props) => {
     
     
     return (
-        <div className="infoblocks-div">
+        <div className="infoblocks-wrapper">
             <PokemonInfo pokemon={pokemon}/>
             <BreedingInfo height={pokemon.height} weight={pokemon.weight}/>
             <MovesInfo moves={moves}/>

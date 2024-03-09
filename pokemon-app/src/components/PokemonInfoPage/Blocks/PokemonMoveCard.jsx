@@ -1,8 +1,9 @@
 import {useEffect, useState} from "react";
-import typeToColors from "../../../utils/typesToColors";
+import typeToColor from "../../../utils/typesToColors";
 import typeImages from "../../../utils/typeImages";
 
 export const PokemonMoveCard = ({name, url}) => {
+    
     const [type, setType] = useState('')
 
     const nameSplit = name.split('-');
@@ -13,13 +14,15 @@ export const PokemonMoveCard = ({name, url}) => {
             .then(response => response.json())
             .then(json => setType(json.type.name))
     }, []);
-
+    
     return (
         <div
-            style={{backgroundColor: typeToColors[type]}}
+            style={{backgroundColor: typeToColor(type)}}
             className="pokemon-move-card">
+            <div className="stats">
             <img src={typeImages[type]} alt={type}/>
-            <p>{newName}</p>
+            <span>{newName}</span>
+            </div>
         </div>
     )
 }

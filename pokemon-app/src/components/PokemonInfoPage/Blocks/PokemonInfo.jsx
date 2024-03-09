@@ -20,30 +20,31 @@ const PokemonInfo = ({pokemon}) => {
                 <div className="info-card-content">
                     <div className="info-card-stats">
                         <div className="stat-item">
-                            <h4>HP: {pokemon.stats[0].base_stat}</h4>
+                            <h4>HP</h4>
                             <div className="stat-bar hp">
-                                <div className="stat-fill" style={{ width: `${(pokemon.stats[0].base_stat / 300) * 100}%` }}></div>
+                                <div className="stat-fill" style={{ width: `${(pokemon.stats[0].base_stat / 150) * 100}%` }}></div>
                             </div>
                         </div>
                         <div className="stat-item">
-                            <h4>Attack: {pokemon.stats[1].base_stat}</h4>
+                            <h4>Attack</h4>
                             <div className="stat-bar attack">
-                                <div className="stat-fill" style={{ width: `${(pokemon.stats[1].base_stat / 300) * 100}%` }}></div>
+                                <div className="stat-fill" style={{ width: `${(pokemon.stats[1].base_stat / 150) * 100}%` }}></div>
                             </div>
                         </div>
                         <div className="stat-item">
-                            <h4>Defense: {pokemon.stats[2].base_stat}</h4>
+                            <h4>Defense</h4>
                             <div className="stat-bar defense">
-                                <div className="stat-fill" style={{ width: `${(pokemon.stats[2].base_stat / 300) * 100}%` }}></div>
+                                <div className="stat-fill" style={{ width: `${(pokemon.stats[2].base_stat / 150) * 100}%` }}></div>
                             </div>
                         </div>
                         <div className="stat-item">
-                            <h4>Speed: {pokemon.stats[5].base_stat}</h4>
+                            <h4>Speed</h4>
                             <div className="stat-bar speed">
-                                <div className="stat-fill" style={{ width: `${(pokemon.stats[5].base_stat / 300) * 100}%` }}></div>
+                                <div className="stat-fill" style={{ width: `${(pokemon.stats[5].base_stat / 150) * 100}%` }}></div>
                             </div>
                         </div>
                     </div>
+                    <img className="pokemon-general-info-image" src={pokemon.sprites.other.home.front_default} alt="Pokemon"/>
                 </div>
             </div>
         </div>

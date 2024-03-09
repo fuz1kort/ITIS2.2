@@ -1,0 +1,259 @@
+h4 {
+    font-family: Poppins, sans-serif;
+    font-weight: lighter;
+}
+.infoblocks-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 1%;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(7, 42, 200, 0.3);
+}
+
+.info-card-wrapper {
+    margin: 20px;
+}
+
+.info-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.info-card-header h2{
+    font-weight: lighter;
+}
+
+.pokemon-general-info h3{
+    text-align: left;
+    color: #747474;
+}
+
+.pokemon-general-info h2 {
+    font-family: Poppins, sans-serif;
+    margin-top: 5px;
+    color: #072ac8;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.pokemon-types-info {
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.pokemon-types-info .pokemon-type {
+    margin: 10px;
+    width: 80%;
+    font-size: 20px;
+    min-height: 28px;
+}
+
+.info-card-content {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -3%;
+}
+
+.info-card-stats {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+}
+
+.info-card-stats h4 {
+    margin: 20px 0 5px 0;
+}
+
+.stat-item {
+    margin-bottom: 10px;
+}
+
+.stat-bar {
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.hp .stat-fill {
+    background-color: #60d394;
+}
+
+.hp {
+    background-color: rgba(96, 211, 148, 0.25);
+}
+
+.attack .stat-fill {
+    background-color: #f14b3d;
+}
+
+.attack {
+    background-color: rgba(241, 75, 61, 0.25);
+}
+
+.defense .stat-fill {
+    background-color: #fdd85d;
+}
+
+.defense {
+    background-color: rgba(253, 216, 93, 0.25);
+}
+
+.speed .stat-fill {
+    background-color: #ff844f;
+}
+
+.speed {
+    background-color: rgba(255, 132, 79, 0.25);
+}
+
+.pokemon-general-info-image {
+    width: 40%;
+    margin-left: 20%;
+}
+
+.height-weight-div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.height-weight-div h4 {
+    font-weight: lighter;
+    font-size: 18px;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.height-weight-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #CCCCCC;
+    background-color: #F8F9FA;
+    min-height: 50px;
+    min-width: 280px;
+}
+
+.height-weight-stats span {
+    color: #595F65;
+    margin: 0 10px;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-move-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 170px;
+    max-width: 200px;
+    min-height: 130px;
+    max-height: 200px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.moves-list{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.moves-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.pokemon-move-card img{
+    min-width: 80px;
+    max-width: 120px;
+}
+
+.pokemon-move-card span{
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.abilities-list {
+    display: flex;
+    justify-content: center;
+}
+
+.ability {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 270px;
+    max-width: 300px;
+    min-height: 100px;
+    max-height: 150px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.first { 
+    background-color: #FFCC33;
+}
+
+.second{
+    background-color: #FF7744;
+}
+
+.ability-name{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.ability-letter{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ability-first-letter{
+    font-size: 18px;
+    color: #FFCC33;
+}
+
+.ability-second-letter{
+    font-size: 18px;
+    color: #FF7744;
+}
+
+
+
