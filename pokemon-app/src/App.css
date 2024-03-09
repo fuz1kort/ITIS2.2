@@ -118,6 +118,7 @@ body {
 .card-content{
     display: flex;
     justify-content: center;
+    max-width: 150px;
 }
 
 .card-header {
