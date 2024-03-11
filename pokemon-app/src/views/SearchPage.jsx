@@ -37,7 +37,7 @@ const SearchPage = () => {
                     })
                     .catch(error => console.error('Error fetching initial data:', error));
             }
-        }, [fetching, offset]
+        }, [fetching, offset, allPokemons]
     )
     ;
 
@@ -106,7 +106,6 @@ const SearchPage = () => {
     };
 
     useEffect(() => {
-        console.log(isSearching)
         checkIfFetchingNeeded();
     }, [searchResults]);
 

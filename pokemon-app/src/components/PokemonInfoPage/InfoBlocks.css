@@ -2,6 +2,7 @@ h4 {
     font-family: Poppins, sans-serif;
     font-weight: lighter;
 }
+
 .infoblocks-wrapper {
     display: flex;
     align-items: center;
@@ -13,7 +14,7 @@ h4 {
     border-radius: 10px;
     margin: 10px;
     padding: 1%;
-    width: 30%;
+    width: calc(70% - 10px);
     box-shadow: 0 4px 8px rgba(7, 42, 200, 0.3);
 }
 
@@ -24,14 +25,14 @@ h4 {
 .info-card-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 3%;
 }
 
-.info-card-header h2{
+.info-card-header h2 {
     font-weight: lighter;
 }
 
-.pokemon-general-info h3{
+.pokemon-general-info h3 {
     text-align: left;
     color: #747474;
 }
@@ -47,13 +48,13 @@ h4 {
 .pokemon-types-info {
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 40%;
 }
 
 .pokemon-types-info .pokemon-type {
     margin: 10px;
-    width: 80%;
-    font-size: 20px;
+    width: 90%;
+    font-size: 140%;
     min-height: 28px;
 }
 
@@ -150,7 +151,7 @@ h4 {
     border: 2px solid #CCCCCC;
     background-color: #F8F9FA;
     min-height: 50px;
-    min-width: 280px;
+    min-width: 100%;
 }
 
 .height-weight-stats span {
@@ -158,48 +159,42 @@ h4 {
     margin: 0 10px;
 }
 
-.stats{
+.stats {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 35%;
 }
 
 .pokemon-move-card {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 170px;
-    max-width: 200px;
-    min-height: 130px;
-    max-height: 200px;
+    width: 50%;
+    min-height: 100px;
+    margin: 5px;
     background-color: #ccc;
     border-radius: 10px;
-    margin: 10px;
 }
 
-.moves-list{
+.moves-list {
     display: flex;
-    flex-wrap: wrap;
-    max-width: fit-content;
     justify-content: center;
     align-items: center;
+    width: 90%;
 }
 
-.moves-container{
+.moves-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
 }
 
-.pokemon-move-card img{
-    min-width: 80px;
-    max-width: 120px;
-}
-
-.pokemon-move-card span{
+.pokemon-move-card span {
     color: #ffffff;
     font-size: 14px;
+    text-align: center;
 }
 
 .abilities-list {
@@ -221,38 +216,141 @@ h4 {
     margin: 10px;
 }
 
-.first { 
+.first {
     background-color: #FFCC33;
 }
 
-.second{
+.second {
     background-color: #FF7744;
 }
 
-.ability-name{
+.ability-name {
     color: #ffffff;
     font-size: 20px;
 }
 
-.ability-letter{
+.ability-letter {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: #ffffff;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ability-first-letter{
+.ability-first-letter {
     font-size: 18px;
     color: #FFCC33;
 }
 
-.ability-second-letter{
+.ability-second-letter {
     font-size: 18px;
     color: #FF7744;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .info-card {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .info-card {
+        width: 90%;
+    }
+
+    .info-card-header h2 {
+        font-size: large;
+    }
+
+    .pokemon-general-info h2 {
+        font-size: larger;
+    }
+
+    .pokemon-general-info h3 {
+        font-size: medium;
+    }
+
+    .info-card-stats h4 {
+        font-size: small;
+    }
+
+    .pokemon-types-info {
+        width: 40%;
+    }
+
+    .pokemon-types-info .pokemon-type {
+        margin: 5px;
+        width: 90%;
+        font-size: 90%;
+        min-height: 20px;
+    }
+
+    .pokemon-general-info-image {
+        width: 60%;
+        margin-left: 10%;
+    }
+
+    .height-weight-div {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .stats {
+        width: 50%;
+        margin: 5px;
+    }
+
+    .height-weight-div h4 {
+        font-size: smaller;
+        margin-bottom: 10px;
+    }
+
+    .height-weight-stats span {
+        margin: 0 5px;
+        font-size: small;
+    }
+
+    .moves-list {
+        width: 100%;
+    }
+
+    .pokemon-move-card span {
+        font-size: 60%;
+    }
+
+    .abilities-list {
+        width: 100%;
+    }
+
+    .ability {
+        min-width: 0;
+        min-height: 0;
+        width: 50%;
+        height: 100%;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .ability-name {
+        font-size: 70%;
+    }
+
+    .ability-letter {
+        width: 15%;
+        height: 15%;
+        margin-bottom: 2px;
+    }
+
+    .ability-first-letter {
+        font-size: 70%;
+    }
+
+    .ability-second-letter {
+        font-size: 70%;
+    }
 }
 
 

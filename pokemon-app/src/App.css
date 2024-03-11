@@ -100,11 +100,15 @@ body {
     width: 100%;
 }
 
+.pokemon-list {
+    width: 100%;
+}
 .pokemon-list-wrapper {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 0 4%;
+    width: 100%;
 }
 
 .pokemon-card {
@@ -235,7 +239,7 @@ body {
     a {
         max-width: 20%;
     }
-    
+
     .pokemon-card {
         width: calc(90% - 7px);
         white-space: nowrap;
