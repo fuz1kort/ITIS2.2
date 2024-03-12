@@ -173,7 +173,6 @@ body {
     color: white;
     display: flex;
     justify-content: space-between;
-    width: 90%;
 }
 
 .not-found {
@@ -198,6 +197,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5px;
 }
 
 .pokemon-header {

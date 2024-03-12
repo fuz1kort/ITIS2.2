@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="changes in UI">
+    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="remade pagination">
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
@@ -127,6 +127,7 @@
       <workItem from="1709845137157" duration="11038000" />
       <workItem from="1709906275745" duration="14437000" />
       <workItem from="1709966272172" duration="4389000" />
+      <workItem from="1710248205814" duration="1686000" />
     </task>
     <task id="LOCAL-00001" summary="init deploy">
       <option name="closed" value="true" />
@@ -288,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709969297676</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added adaptive to detailed page">
+      <option name="closed" value="true" />
+      <created>1710150194041</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1710150194041</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,6 +333,8 @@
     <MESSAGE value="added detailed page&#10;need styles" />
     <MESSAGE value="починить пагинацию при поиске" />
     <MESSAGE value="changes in UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in UI" />
+    <MESSAGE value="added adaptive to detailed page" />
+    <MESSAGE value="remade pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="remade pagination" />
   </component>
 </project>

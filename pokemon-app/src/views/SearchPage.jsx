@@ -32,12 +32,12 @@ const SearchPage = () => {
                     .then(response => response.json())
                     .then(data => {
                         data.results.map(pokemon => fetchPokemonData(pokemon));
-                        setOffset(prevOffset => prevOffset + 20)
+                        setOffset(prevOffset => prevOffset + 10)
                         checkIfFetchingNeeded()
                     })
                     .catch(error => console.error('Error fetching initial data:', error));
             }
-        }, [fetching, offset, allPokemons]
+        }, [fetching, offset]
     )
     ;
 
