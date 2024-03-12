@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ITIS2.2/static/css/main.2f6d4c30.css",
-    "main.js": "/ITIS2.2/static/js/main.7fcbf5af.js",
+    "main.css": "/ITIS2.2/static/css/main.34cc3646.css",
+    "main.js": "/ITIS2.2/static/js/main.9d12f4ef.js",
     "static/media/Pokeball.png": "/ITIS2.2/static/media/Pokeball.a01c63b30b8321c9b3d1.png",
     "static/media/loading.gif": "/ITIS2.2/static/media/loading.08f263c813108449b5ed.gif",
     "index.html": "/ITIS2.2/index.html",
-    "main.2f6d4c30.css.map": "/ITIS2.2/static/css/main.2f6d4c30.css.map",
-    "main.7fcbf5af.js.map": "/ITIS2.2/static/js/main.7fcbf5af.js.map"
+    "main.34cc3646.css.map": "/ITIS2.2/static/css/main.34cc3646.css.map",
+    "main.9d12f4ef.js.map": "/ITIS2.2/static/js/main.9d12f4ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f6d4c30.css",
-    "static/js/main.7fcbf5af.js"
+    "static/css/main.34cc3646.css",
+    "static/js/main.9d12f4ef.js"
   ]
 }
