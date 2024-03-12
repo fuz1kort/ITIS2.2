@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="changes in UI">
+    <list default="true" id="c9163a71-fbb0-4fde-b8e6-d581d63fcfbd" name="Changes" comment="re-factoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/AbilitiesInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PokemonInfoPage/components/Blocks/AbilitiesInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/BreedingInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PokemonInfoPage/components/Blocks/BreedingInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/MovesInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PokemonInfoPage/components/Blocks/MovesInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/PokemonInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PokemonInfoPage/components/Blocks/PokemonInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonInfoPage/Blocks/PokemonMoveCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PokemonInfoPage/components/Blocks/PokemonMoveCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonInfoPage/InfoBlocks.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PokemonInfoPage/components/InfoBlocks.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonInfoPage/InfoBlocks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PokemonInfoPage/components/InfoBlocks.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonInfoPage/PokemonHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PokemonInfoPage/components/PokemonHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchPokemonPage/NotFound.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPokemonPage/components/NotFound.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchPokemonPage/PokemonCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPokemonPage/components/PokemonCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchPokemonPage/PokemonsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPokemonPage/components/PokemonsList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchPokemonPage/SearchHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPokemonPage/components/SearchHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/PokemonPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PokemonInfoPage/PokemonInfoPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SearchPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPokemonPage/SearchPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SearchPokemonPage/SearchPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPokemonPage/SearchPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,11 +105,11 @@
       <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\components\PokemonTypes" />
-      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\components\PokemonInfoPage\Blocks" />
-      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\components\PokemonInfoPage" />
-      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\components\SearchPokemonPage" />
-      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\components\Pokemons" />
+      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\views\PokemonInfoPage\components" />
+      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\views\PokemonInfoPage" />
+      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\views" />
+      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\views\SearchPokemonPage" />
+      <recent name="C:\Users\Marat\source\repos\fuz1kort\ITIS2.2\pokemon-app\src\views\components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -299,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709969297676</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="re-factoring">
+      <option name="closed" value="true" />
+      <created>1710257243302</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1710257243302</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +330,7 @@
     <MESSAGE value="added detailed page&#10;need styles" />
     <MESSAGE value="починить пагинацию при поиске" />
     <MESSAGE value="changes in UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in UI" />
+    <MESSAGE value="re-factoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="re-factoring" />
   </component>
 </project>
