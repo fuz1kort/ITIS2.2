@@ -1,8 +1,8 @@
-import loading from "../assets/loading.gif"
-import SearchHeader from "../components/SearchPokemonPage/SearchHeader";
+import loading from "../../assets/loading.gif"
+import SearchHeader from "./components/SearchHeader";
 import React, {useEffect, useState} from "react";
-import PokemonsList from "../components/SearchPokemonPage/PokemonsList";
-import NotFound from "../components/SearchPokemonPage/NotFound";
+import PokemonsList from "./components/PokemonsList";
+import NotFound from "./components/NotFound";
 
 const SearchPage = () => {
     const [allPokemons, setAllPokemons] = useState([]);

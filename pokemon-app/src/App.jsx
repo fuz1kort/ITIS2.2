@@ -1,8 +1,8 @@
 import './App.css';
 import React from "react"
-import SearchPage from "./views/SearchPage";
+import SearchPage from "./views/SearchPokemonPage/SearchPage";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import PokemonPage from "./views/PokemonPage";
+import PokemonInfoPage from "./views/PokemonInfoPage/PokemonInfoPage";
 
 function App() {
     return (
@@ -11,7 +11,7 @@ function App() {
                 <Routes>
                     <Route path="/ITIS2.2" Component={SearchPage} />
                     <Route path="/" Component={SearchPage} />
-                    <Route path="/pokemon/:name" Component={PokemonPage} />
+                    <Route path="/pokemon/:name" Component={PokemonInfoPage} />
                 </Routes>
             </BrowserRouter>
         </>

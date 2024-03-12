@@ -1,4 +1,4 @@
-import pokeball from "../../assets/Pokeball.png";
+import pokeball from "../../../assets/Pokeball.png";
 import {Link} from "react-router-dom";
 
 const PokemonHeader = () => {
