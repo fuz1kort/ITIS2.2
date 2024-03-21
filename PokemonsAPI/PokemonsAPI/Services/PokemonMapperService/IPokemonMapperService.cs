@@ -14,11 +14,4 @@ public interface IPokemonMapperService
     /// <typeparam name="TPokemon"></typeparam>
     /// <returns></returns>
     public TPokemon Map<TPokemon>(string json);
-    
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <typeparam name="TList"></typeparam>
-    /// <returns></returns>
-    public IEnumerable<Pokemon> Map<List<Pokemon>>(string json);
 }
