@@ -7,13 +7,16 @@
         <member name="T:PokemonsAPI.Controllers.PokemonsController">
             <inheritdoc />
         </member>
-        <member name="M:PokemonsAPI.Controllers.PokemonsController.Get">
+        <member name="M:PokemonsAPI.Controllers.PokemonsController.#ctor(PokemonsAPI.Services.PokemonsApiService.IPokemonsApiService)">
+            <inheritdoc />
+        </member>
+        <member name="M:PokemonsAPI.Controllers.PokemonsController.Get(System.Int32,System.Int32)">
             <summary>
             Метод для получения всех покемонов
             </summary>
             <returns>Возвращает список всех покемонов в системе</returns>
         </member>
-        <member name="M:PokemonsAPI.Controllers.PokemonsController.GetByFilter(System.String)">
+        <member name="M:PokemonsAPI.Controllers.PokemonsController.GetByFilter(System.String,System.Int32)">
             <summary>
             Метод для получения покемонов по указанной строке пользователя
             </summary>
@@ -39,6 +42,73 @@
             <summary>
             Heigth
             </summary>
+        </member>
+        <member name="T:PokemonsAPI.Models.DTOs.PokemonListDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PokemonsAPI.Models.DTOs.PokemonListDto.Results">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PokemonsAPI.Models.Pokemon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PokemonsAPI.Models.Pokemon.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PokemonsAPI.Models.Pokemon.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PokemonsAPI.Models.Pokemon.Url">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PokemonsAPI.Models.Pokemon.Breeding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PokemonsAPI.Services.PokemonsApiService.IPokemonsApiService">
+            <summary>
+            Интерфейс сервиса PokemonsApiService
+            </summary>
+        </member>
+        <member name="M:PokemonsAPI.Services.PokemonsApiService.IPokemonsApiService.GetByFilterAsync(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="filter"></param>
+            <param name="limit"></param>
+            <param name="offset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PokemonsAPI.Services.PokemonsApiService.IPokemonsApiService.GetByIdOrNameAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="nameOrId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PokemonsAPI.Services.PokemonsApiService.PokemonsApiService">
+            <summary>
+            Сервис для получения покемонов
+            </summary>
+        </member>
+        <member name="M:PokemonsAPI.Services.PokemonsApiService.PokemonsApiService.GetByFilterAsync(System.String,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:PokemonsAPI.Services.PokemonsApiService.PokemonsApiService.GetByIdOrNameAsync(System.String)">
+            <inheritdoc />
         </member>
     </members>
 </doc>

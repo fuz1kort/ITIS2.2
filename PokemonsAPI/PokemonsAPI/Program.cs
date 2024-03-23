@@ -1,6 +1,6 @@
 using System.Reflection;
 using PokemonsAPI.Services;
-using PokemonsAPI.Services.PokemonMapperService;
+using PokemonsAPI.Services.PokemonsApiService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddControllers();
 builder.Services.AddScoped<IPokemonsApiService, PokemonsApiService>();
-builder.Services.AddScoped<IPokemonMapperService, PokemonMapperService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {

@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using PokemonsAPI.Models;
-using PokemonsAPI.Services;
-using PokemonsAPI.Services.PokemonMapperService;
+using PokemonsAPI.Services.PokemonsApiService;
 
 namespace PokemonsAPI.Controllers
 {
@@ -11,22 +10,9 @@ namespace PokemonsAPI.Controllers
     public class PokemonsController : ControllerBase
     {
         private readonly IPokemonsApiService _pokemonsApiService;
-        private readonly IPokemonMapperService _mapper;
 
         /// <inheritdoc />
-        public PokemonsController(IPokemonsApiService pokemonsApiService, IPokemonMapperService mapper)
-        {
-            _pokemonsApiService = pokemonsApiService;
-            _mapper = mapper;
-        }
-
-        private static readonly List<Pokemon?> Data =
-        [
-            new Pokemon { Id = 1, Name = "First", Url = "" },
-            new Pokemon { Id = 2, Name = "Second", Url = "" },
-            new Pokemon { Id = 3, Name = "Anton", Url = "" },
-            new Pokemon { Id = 4, Name = "Ne Anton", Url = "" }
-        ];
+        public PokemonsController(IPokemonsApiService pokemonsApiService) => _pokemonsApiService = pokemonsApiService;
 
         /// <summary>
         /// Метод для получения всех покемонов
@@ -34,9 +20,9 @@ namespace PokemonsAPI.Controllers
         /// <returns>Возвращает список всех покемонов в системе</returns>
         // GET: api/Pokemon
         [HttpGet]
-        public IEnumerable<object> Get()
+        public IEnumerable<Pokemon> Get(int limit, int offset)
         {
-            return Data.Select(p => new { p.Id, p.Name, p.Url });
+            return _pokemonsApiService.GetByFilterAsync("", offset).Result;
         }
 
         /// <summary>
@@ -44,10 +30,9 @@ namespace PokemonsAPI.Controllers
         /// </summary>
         /// <returns>Возвращает список всех найденых покемонов в системе</returns>
         [HttpGet("GetByFilter")]
-        public IEnumerable<object> GetByFilter([FromQuery] string name)
+        public async Task<IEnumerable<Pokemon>> GetByFilter(string filter, int offset)
         {
-            return Data.Where(p => p != null && p.Name.Contains(name, StringComparison.OrdinalIgnoreCase))
-                .Select(p => new { p.Id, p.Name, p.Url });
+            return await _pokemonsApiService.GetByFilterAsync(filter, offset);
         }
 
         /// <summary>
@@ -56,11 +41,9 @@ namespace PokemonsAPI.Controllers
         /// <returns>Возвращает полную информацию о покемоне по заданному Id или Name</returns>
         // GET: api/Pokemon/5
         [HttpGet("{nameOrId}")]
-        public Pokemon? GetByIdOrName([FromRoute] string nameOrId)
+        public async Task<Pokemon?> GetByIdOrName([FromRoute] string nameOrId)
         {
-            return int.TryParse(nameOrId, out var id)
-                ? Data.FirstOrDefault(p => p != null && p.Id == id)
-                : Data.FirstOrDefault(p => p != null && p.Name.Equals(nameOrId, StringComparison.OrdinalIgnoreCase));
+            return await _pokemonsApiService.GetByIdOrNameAsync(nameOrId);
         }
     }
 }

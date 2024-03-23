@@ -1,6 +1,6 @@
 using PokemonsAPI.Models;
 
-namespace PokemonsAPI.Services;
+namespace PokemonsAPI.Services.PokemonsApiService;
 
 /// <summary>
 /// Интерфейс сервиса PokemonsApiService
@@ -10,20 +10,15 @@ public interface IPokemonsApiService
     /// <summary>
     /// 
     /// </summary>
+    /// <param name="filter"></param>
+    /// <param name="offset"></param>
     /// <returns></returns>
-    public IEnumerable<object> GetAllPokemons();
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="name"></param>
-    /// <returns></returns>
-    public IEnumerable<object> GetByFilter(string name);
+    public Task<IEnumerable<Pokemon>> GetByFilterAsync(string filter = "", int offset = 0);
 
     /// <summary>
     /// 
     /// </summary>
     /// <param name="nameOrId"></param>
     /// <returns></returns>
-    public Pokemon? GetByIdOrName(string nameOrId);
+    public Task<Pokemon?> GetByIdOrNameAsync(string nameOrId);
 }
