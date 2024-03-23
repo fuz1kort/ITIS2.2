@@ -107,7 +107,7 @@ const SearchPage = () => {
 
     useEffect(() => {
         checkIfFetchingNeeded();
-    }, [searchResults, allPokemons]);
+    }, [searchResults]);
 
     return (
         <div>
