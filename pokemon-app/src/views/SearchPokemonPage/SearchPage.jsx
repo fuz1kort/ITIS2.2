@@ -36,15 +36,12 @@ const SearchPage = () => {
                     })
                     .catch(error => console.error('Error fetching initial data:', error));
             }
-        }, [fetching, offset]
+        }, [fetching]
     )
-    ;
 
     const checkIfFetchingNeeded = () => {
         if (searchResults.length === 0) {
-            const visiblePokemons = Object.values(allPokemons).filter(pokemon =>
-                pokemon.name.includes(searchText.toLowerCase())
-            );
+            const visiblePokemons = Object.values(allPokemons)
 
             if (visiblePokemons.length === 0) {
                 return
@@ -107,7 +104,7 @@ const SearchPage = () => {
 
     useEffect(() => {
         checkIfFetchingNeeded();
-    }, [searchResults]);
+    }, [searchResults, allPokemons]);
 
     return (
         <div>
