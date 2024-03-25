@@ -1,16 +1,18 @@
 using System.Reflection;
+using PokemonsAPI.Services;
+using PokemonsAPI.Services.PokemonsApiService;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddControllers();
+builder.Services.AddScoped<IPokemonsApiService, PokemonsApiService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
-    // using System.Reflection;
-    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+    var xmlPath = $"{AppDomain.CurrentDomain.BaseDirectory}PokemonsAPI.xml";
+    options.IncludeXmlComments(xmlPath);
 });
 
 var app = builder.Build();

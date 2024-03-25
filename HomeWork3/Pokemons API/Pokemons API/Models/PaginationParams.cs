@@ -1,4 +1,4 @@
-namespace Pokemons_API.Models;
+namespace PokemonsAPI.Models;
 
 public class PaginationParams
 {

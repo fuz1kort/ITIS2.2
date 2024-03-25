@@ -1,4 +1,4 @@
-import PokemonTypes from "../../PokemonTypes/PokemonTypes";
+import PokemonTypes from "../../../../components/PokemonTypes/PokemonTypes";
 
 const PokemonInfo = ({pokemon}) => {
     if (!pokemon) {

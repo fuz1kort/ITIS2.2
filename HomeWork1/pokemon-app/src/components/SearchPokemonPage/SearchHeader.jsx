@@ -1,4 +1,4 @@
-import pokeball from "../../assets/Pokeball.png"
+import pokeball from "../../../assets/Pokeball.png"
 
 const SearchHeader = ({inputText, handleChange, handleSubmit}) => {
     return <header className="App-header">

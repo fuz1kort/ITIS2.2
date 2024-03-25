@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import PokemonTypes from "../PokemonTypes/PokemonTypes";
+import PokemonTypes from "../../../components/PokemonTypes/PokemonTypes";
 
 const PokemonCard = ({pokemon}) => {
     if (!pokemon) {

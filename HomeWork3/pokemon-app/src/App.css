@@ -4,7 +4,7 @@
 
 a {
     text-decoration: none;
-    max-width: 50%;
+    margin: 5px;
 }
 
 body {
@@ -105,7 +105,7 @@ body {
 }
 .pokemon-list-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 4%;
     width: 100%;
@@ -113,7 +113,7 @@ body {
 
 .pokemon-card {
     box-shadow: rgba(0,0,0,0.1) 0 5px 5px 5px;
-    margin: 20px 5px;
+    margin: 10px 5px;
     border-radius: 10px;
     padding: 0 8px;
     align-items: center;
@@ -237,7 +237,7 @@ body {
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     a {
-        max-width: 20%;
+        max-width: 18%;
     }
 
     .pokemon-card {

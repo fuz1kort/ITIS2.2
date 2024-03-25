@@ -1,8 +1,8 @@
-import loading from "../assets/loading.gif"
-import SearchHeader from "../components/SearchPokemonPage/SearchHeader";
+import loading from "../../assets/loading.gif"
+import SearchHeader from "./components/SearchHeader";
 import React, {useEffect, useState} from "react";
-import PokemonsList from "../components/SearchPokemonPage/PokemonsList";
-import NotFound from "../components/SearchPokemonPage/NotFound";
+import PokemonsList from "./components/PokemonsList";
+import NotFound from "./components/NotFound";
 
 const SearchPage = () => {
     const [allPokemons, setAllPokemons] = useState([]);
@@ -21,31 +21,27 @@ const SearchPage = () => {
     })
 
     const scrollHandler = (e) => {
-        if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 600 && !fetching) {
+        if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100 && !fetching) {
             setFetching(true)
         }
     }
 
     useEffect(() => {
             if (fetching) {
-                fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`)
+                fetch(`https://pokeapi.co/api/v2/pokemon?limit=40&offset=${offset}`)
                     .then(response => response.json())
                     .then(data => {
                         data.results.map(pokemon => fetchPokemonData(pokemon));
-                        setOffset(prevOffset => prevOffset + 10)
-                        checkIfFetchingNeeded()
+                        setOffset(prevOffset => prevOffset + 20)
                     })
                     .catch(error => console.error('Error fetching initial data:', error));
             }
-        }, [fetching, offset]
+        }, [fetching]
     )
-    ;
 
     const checkIfFetchingNeeded = () => {
         if (searchResults.length === 0) {
-            const visiblePokemons = Object.values(allPokemons).filter(pokemon =>
-                pokemon.name.includes(searchText.toLowerCase())
-            );
+            const visiblePokemons = Object.values(allPokemons)
 
             if (visiblePokemons.length === 0) {
                 return
@@ -80,7 +76,8 @@ const SearchPage = () => {
                             [pokemonData.id]: pokemonData
                         }));
                     }
-
+                    
+                setFetching(false)
                 }
             )
             .catch(error => console.error('Error fetching data for', pokemon.name, ':', error))
@@ -107,7 +104,7 @@ const SearchPage = () => {
 
     useEffect(() => {
         checkIfFetchingNeeded();
-    }, [searchResults]);
+    }, [searchResults, allPokemons]);
 
     return (
         <div>

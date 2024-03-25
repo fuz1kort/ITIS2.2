@@ -6910,23 +6910,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gafar\\.nuget\\packages\\": {},
+    "C:\\Users\\Marat\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gafar\\source\\repos\\fuz1kort\\ITIS2.2\\Pokemons API\\Pokemons API\\Pokemons API.csproj",
-      "projectName": "Pokemons API",
-      "projectPath": "C:\\Users\\gafar\\source\\repos\\fuz1kort\\ITIS2.2\\Pokemons API\\Pokemons API\\Pokemons API.csproj",
-      "packagesPath": "C:\\Users\\gafar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gafar\\source\\repos\\fuz1kort\\ITIS2.2\\Pokemons API\\Pokemons API\\obj\\",
+      "projectUniqueName": "C:\\Users\\Marat\\source\\repos\\fuz1kort\\ITIS2.2\\PokemonsAPI\\PokemonsAPI\\PokemonsAPI.csproj",
+      "projectName": "PokemonsAPI",
+      "projectPath": "C:\\Users\\Marat\\source\\repos\\fuz1kort\\ITIS2.2\\PokemonsAPI\\PokemonsAPI\\PokemonsAPI.csproj",
+      "packagesPath": "C:\\Users\\Marat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Marat\\source\\repos\\fuz1kort\\ITIS2.2\\PokemonsAPI\\PokemonsAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\gafar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Marat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

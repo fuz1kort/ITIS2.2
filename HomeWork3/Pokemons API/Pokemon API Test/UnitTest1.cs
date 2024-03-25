@@ -1,4 +1,4 @@
-namespace Pokemon_API_Test;
+namespace PokemonAPITests;
 
 [TestClass]
 public class UnitTest1
