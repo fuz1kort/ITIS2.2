@@ -1,0 +1,216 @@
+.App {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    max-width: 50%;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    position: relative;
+}
+
+.search-page-content {
+    display: flex;
+    justify-content: center;
+}
+
+.loading {
+    margin-top: 100px;
+}
+
+*   {
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.App-header {
+    background-color: #072AC8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    max-height: 250px;
+}
+
+.pokeball-image {
+    width: calc(80px + 2vmin);
+    position: absolute;
+    right: -25px;
+    top: -20px;
+    opacity: .4;
+}
+
+.search-main-div {
+    margin: 30px 10px;
+    min-width: 50%;
+}
+
+.label-div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.label {
+    font-size: calc(25px + 2vmin);
+    text-align: left;
+    margin-right: 50px;
+}
+
+.search-div {
+    margin: 20px 0 5px 0;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    height: calc(35px + 2vmin)
+}
+
+.search-image {
+    margin: auto 0 auto 20px;
+    height: calc(30px + 2vmin)
+}
+
+.search-input {
+    font-size: calc(7px + 1.5vmin);
+    margin: 0 5px 0 20px;
+    outline: none;
+    border: none;
+    width: 85%;
+}
+
+.search-button {
+    background-color: black;
+    border-radius: 40px;
+    width: calc(100px + 1.5vmin);
+    color: white;
+    border: none;
+    margin: 2px 2px 2px 2px;
+    height: calc(30px + 2vmin);
+    font-size: calc(10px + 1.5vmin);
+}
+
+.pokemon-list {
+    width: 100%;
+}
+
+.pokemon-list {
+    width: 100%;
+}
+.pokemon-list-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 4%;
+    width: 100%;
+}
+
+.pokemon-card {
+    box-shadow: rgba(0,0,0,0.1) 0 5px 5px 5px;
+    margin: 20px 5px;
+    border-radius: 10px;
+    padding: 0 8px;
+    align-items: center;
+}
+
+.card-content{
+    display: flex;
+    justify-content: center;
+    max-width: 150px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2px;
+    margin-top: 7px;
+    align-items: center;
+}
+
+.pokemon-name {
+    color: rgba(7, 42, 200, 1);
+    font-family: Poppins, sans-serif;
+    padding: 3px 3px;
+    font-size: 12px;
+}
+
+.pokemon-id {
+    color: rgba(20, 20, 20, 0.8);
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    padding: 3px 4px;
+}
+
+.card-image {
+    max-width: 130px;
+    max-height: 160px;
+    min-width: 80px;
+    min-height: 80px;
+    border-radius: 10px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+}
+
+.pokemon-types {
+    font-family: Poppins, sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.not-found {
+    margin-top: 100px;
+    padding: 15px;
+    font-family: Poppins, sans-serif;
+    justify-content: center;
+    width: 100%;
+}
+
+.not-found-pikachu{
+    margin-top: 30px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.pokemon-type {
+    width: 50px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+    .pokemon-card {
+        width: calc(100% - 10px);
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    a {
+        max-width: 20%;
+    }
+
+    .pokemon-card {
+        width: calc(90% - 7px);
+        white-space: nowrap;
+    }
+}
