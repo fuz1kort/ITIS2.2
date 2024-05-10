@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using PokemonsAPI.Models.DTOs.SpriteIndoDto;
 
 namespace PokemonsAPI.Models.DTOs;
 
