@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
-import typeToColor from "../../../../utils/typesToColors";
-import typeImages from "../../../../utils/typeImages";
+import typeToColor from "../../../utils/typesToColors";
+import typeImages from "../../../utils/typeImages";
 
 export const PokemonMoveCard = ({name, url}) => {
     

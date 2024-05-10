@@ -2,6 +2,7 @@ import PokemonCard from "./PokemonCard";
 import NotFound from "./NotFound";
 
 const PokemonsList = ({pokemons}) => {
+    console.log(pokemons)
     if (pokemons.length !== 0) {
         return (
             <div className="pokemon-list">
