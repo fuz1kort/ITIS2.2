@@ -4,6 +4,8 @@ const loadPokemonsByFilter = async (limit, offset, filter = '') => {
             limit, offset
         }))
             .then(response => response.json())
+    
+
 
     return await fetch(process.env.REACT_APP_API_URL + `Pokemon/GetByFilter/${filter}?` + new URLSearchParams({
         limit, offset

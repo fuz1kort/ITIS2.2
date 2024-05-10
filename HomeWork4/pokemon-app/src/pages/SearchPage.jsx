@@ -26,7 +26,7 @@ const SearchPage = () => {
             setFetching(true)
         }
     }
-
+    
     useEffect(() => {
             if (fetching) {
                 loadPokemonsByFilter(20, offset, searchText)
@@ -49,12 +49,9 @@ const SearchPage = () => {
                     })
                     .catch(error => console.error('Error fetching initial data:', error));
             }
-            
-            
-           
         }, [fetching, offset]
     )
-
+    
     const checkIfFetchingNeeded = () => {
         if (searchResults.length === 0) {
             const visiblePokemons = Object.values(allPokemons).filter(pokemon =>

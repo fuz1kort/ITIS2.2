@@ -149,32 +149,32 @@
             
             </summary>
         </member>
-        <member name="T:PokemonsAPI.Models.DTOs.SpriteInfoDto">
+        <member name="T:PokemonsAPI.Models.DTOs.SpriteIndoDto.SpriteInfoDto">
             <summary>
             
             </summary>
         </member>
-        <member name="P:PokemonsAPI.Models.DTOs.SpriteInfoDto.Other">
+        <member name="P:PokemonsAPI.Models.DTOs.SpriteIndoDto.SpriteInfoDto.Other">
             <summary>
             
             </summary>
         </member>
-        <member name="T:PokemonsAPI.Models.DTOs.SpriteOther">
+        <member name="T:PokemonsAPI.Models.DTOs.SpriteIndoDto.SpriteOther">
             <summary>
             
             </summary>
         </member>
-        <member name="P:PokemonsAPI.Models.DTOs.SpriteOther.Home">
+        <member name="P:PokemonsAPI.Models.DTOs.SpriteIndoDto.SpriteOther.Home">
             <summary>
             
             </summary>
         </member>
-        <member name="T:PokemonsAPI.Models.DTOs.SpriteOtherHome">
+        <member name="T:PokemonsAPI.Models.DTOs.SpriteIndoDto.SpriteOtherHome">
             <summary>
             
             </summary>
         </member>
-        <member name="P:PokemonsAPI.Models.DTOs.SpriteOtherHome.Front_Default">
+        <member name="P:PokemonsAPI.Models.DTOs.SpriteIndoDto.SpriteOtherHome.Front_Default">
             <summary>
             
             </summary>

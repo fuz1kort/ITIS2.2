@@ -1,0 +1,15 @@
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\bin\Debug\net8.0\PokemonsAPI.Core.deps.json
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\bin\Debug\net8.0\PokemonsAPI.Core.dll
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\bin\Debug\net8.0\PokemonsAPI.Core.pdb
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\obj\Debug\net8.0\PokemonsAPI.Core.csproj.AssemblyReference.cache
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\obj\Debug\net8.0\PokemonsAPI.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\obj\Debug\net8.0\PokemonsAPI.Core.AssemblyInfoInputs.cache
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\obj\Debug\net8.0\PokemonsAPI.Core.AssemblyInfo.cs
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\obj\Debug\net8.0\PokemonsAPI.Core.csproj.CoreCompileInputs.cache
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\obj\Debug\net8.0\PokemonsAPI.Core.sourcelink.json
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\obj\Debug\net8.0\PokemonsAPI.Core.dll
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\obj\Debug\net8.0\refint\PokemonsAPI.Core.dll
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\obj\Debug\net8.0\PokemonsAPI.Core.pdb
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\obj\Debug\net8.0\ref\PokemonsAPI.Core.dll
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\bin\Debug\net8.0\PokemonsAPI.Core.runtimeconfig.json
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\obj\Debug\net8.0\PokemonsAPI.Core.genruntimeconfig.cache

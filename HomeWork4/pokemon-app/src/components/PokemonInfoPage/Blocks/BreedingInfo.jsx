@@ -1,9 +1,9 @@
-const BreedingInfo = ({weight, height}) => {
-    if (!weight && !height) {
+const BreedingInfo = ({breeding}) => {
+    if (!breeding) {
         return <div></div>
     }
     
-    const meters = (height / 10).toFixed(1);
+    const meters = (breeding.height / 10).toFixed(1);
     const feet = Math.floor(meters / 0.3048);
     const inches = Number((meters / 0.3048 - feet).toFixed(1).toString().split('.')[1]);
     const inchesStr = (inches < 10) ? `0${inches}` : `${inches}`;
@@ -15,7 +15,7 @@ const BreedingInfo = ({weight, height}) => {
     } else {
         feetAndInches = `${feet}' ${inchesStr}''`
     }
-    const kg = weight / 10;
+    const kg = breeding.weight / 10;
     const lbs = (kg * 2.20462).toFixed(1);
 
     return (<div className="info-card">

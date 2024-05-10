@@ -3,9 +3,9 @@ const AbilitiesInfo = ({abilities}) => {
         return <div></div>
     }
     
-    const firstSplitedName = abilities[0].name.split('-');
+    const firstSplitedName = abilities[0].abilityName.split('-');
     const firstName = firstSplitedName.map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
-    const secondSplitedName = abilities[1].name.split('-');
+    const secondSplitedName = abilities[1].abilityName.split('-');
     const secondName = secondSplitedName.map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
     return (
         <div className="info-card">

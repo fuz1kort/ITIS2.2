@@ -6,7 +6,7 @@ const MovesInfo = ({moves}) => {
     }
 
     moves = moves.slice(0, 6)
-
+    
     return (
         <div className="info-card">
             <div className="info-card-wrapper">
@@ -15,10 +15,10 @@ const MovesInfo = ({moves}) => {
                 </div>
                 <div className="moves-container">
                     <div className="moves-list">
-                        {moves.slice(0, 3).map((move) => <PokemonMoveCard name={move.name} url={move.url} key={move.name} />)}
+                        {moves.slice(0, 3).map((move) => <PokemonMoveCard move={move} key={move.id}/>)}
                     </div>
                     <div className="moves-list">
-                        {moves.slice(3, 6).map((move) => <PokemonMoveCard name={move.name} url={move.url} key={move.name}/>)}
+                        {moves.slice(3, 6).map((move) => <PokemonMoveCard move={move} key={move.id}/>)}
                     </div>
                 </div>
             </div>

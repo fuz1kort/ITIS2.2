@@ -1,6 +1,4 @@
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using PokemonsAPI.Models;
 using PokemonsAPI.Services.PokemonApiService;
 
 namespace PokemonsAPI.Controllers;

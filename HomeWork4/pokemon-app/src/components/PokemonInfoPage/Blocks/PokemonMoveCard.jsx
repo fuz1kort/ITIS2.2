@@ -1,27 +1,24 @@
-import {useEffect, useState} from "react";
 import typeToColor from "../../../utils/typesToColors";
 import typeImages from "../../../utils/typeImages";
+import {useEffect, useState} from "react";
 
-export const PokemonMoveCard = ({name, url}) => {
-    
-    const [type, setType] = useState('')
-
-    const nameSplit = name.split('-');
+export const PokemonMoveCard = ({move}) => {
+    const [typeName, setTypeName] = useState("pokemon");
+    const nameSplit = move.moveName.split('-');
     let newName = nameSplit.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-
     useEffect(() => {
-        fetch(url)
-            .then(response => response.json())
-            .then(json => setType(json.type.name))
-    }, []);
+        fetch(`https://pokeapi.co/api/v2/move/${move.moveName}`)
+            .then(res => res.json())
+            .then(data => setTypeName(data.type.name))
+    })
     
     return (
         <div
-            style={{backgroundColor: typeToColor(type)}}
+            style={{backgroundColor: typeToColor(typeName)}}
             className="pokemon-move-card">
             <div className="stats">
-            <img src={typeImages[type]} alt={type}/>
-            <span>{newName}</span>
+                <img src={typeImages[typeName]} alt={move.moveName}/>
+                <span>{newName}</span>
             </div>
         </div>
     )

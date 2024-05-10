@@ -10,13 +10,15 @@ const InfoBlocks = ({name}) => {
     const [pokemon, setPokemon] = useState('')
     const [moves, setMoves] = useState([])
     const [abilities, setAbilities] = useState([])
+    const [breeding, setBreeding] = useState([])
 
     useEffect(() =>{
         loadPokemonDetailed(name)
             .then(data => {
                 setPokemon(data)
-                setMoves(data.moves.map(i => i.move))
-                setAbilities(data.abilities.map(i => i.ability))
+                setMoves(data.moves)
+                setAbilities(data.abilities)
+                setBreeding(data.breeding)
             })
             .catch(error => console.error('Error fetching initial data:', error));
     }, [])
@@ -25,7 +27,7 @@ const InfoBlocks = ({name}) => {
     return (
         <div className="infoblocks-wrapper">
             <PokemonInfo pokemon={pokemon}/>
-            <BreedingInfo height={pokemon.height} weight={pokemon.weight}/>
+            <BreedingInfo breeding={breeding}/>
             <MovesInfo moves={moves}/>
             <AbilitiesInfo abilities={abilities}/>
         </div>

@@ -9,7 +9,6 @@ function App() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/ITIS2.2" Component={SearchPage} />
                     <Route path="/" Component={SearchPage} />
                     <Route path="/pokemon/:name" Component={PokemonInfoPage} />
                 </Routes>

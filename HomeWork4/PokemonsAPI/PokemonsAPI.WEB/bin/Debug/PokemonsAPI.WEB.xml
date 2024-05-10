@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PokemonsAPI.WEB</name>
+    </assembly>
+    <members>
+        <member name="T:PokemonsAPI.WEB.Controllers.PokemonController">
+            <summary>
+            Контроллер
+            </summary>
+        </member>
+        <member name="M:PokemonsAPI.WEB.Controllers.PokemonController.#ctor(PokemonsAPI.Core.Interfaces.IPokemonApiService)">
+            <summary>
+            
+            </summary>
+            <param name="pokemonApiService"></param>
+        </member>
+        <member name="M:PokemonsAPI.WEB.Controllers.PokemonController.GetAll(System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="limit"></param>
+            <param name="offset"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PokemonsAPI.WEB.Controllers.PokemonController.GetByFilter(System.Int32,System.Int32,System.String,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="limit"></param>
+            <param name="offset"></param>
+            <param name="filter"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PokemonsAPI.WEB.Controllers.PokemonController.GetByIdOrName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="idOrName"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
