@@ -15,7 +15,7 @@ public class PokemonGetAllTests
     private const string Url = "http://localhost:5178/Pokemon/GetAll";
         
     [TestMethod]
-    [DataRow(5)]
+    [DataRow(10)]
     public async Task LimitWorksRight(int limit)
     {
         // Arrange
@@ -61,8 +61,8 @@ public class PokemonGetAllTests
     }
     
     [TestMethod]
-    [DataRow(6)]
-    [DataRow(57)]
+    [DataRow(1)]
+    [DataRow(50)]
     public async Task OffsetWorksRight(int offset)
     {
         // Arrange
@@ -80,7 +80,7 @@ public class PokemonGetAllTests
     }
 
     [TestMethod]
-    [DataRow(4, 11)]
+    [DataRow(10, 15)]
     public async Task LimitAndOffsetWorkRight(int limit, int offset)
     {
         // Arrange
