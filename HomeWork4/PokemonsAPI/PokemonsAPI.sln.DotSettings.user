@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0a99f2be_002D3659_002D4d01_002Dafca_002D15d398ac247a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Limit0Returns20" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::97C7405A-B36A-4067-8628-A24099DE715B::net8.0::PokemonAPITests.PokemonTests.PokemonGetAllTests.Limit0Returns20&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=409b48da_002D1323_002D4cfe_002Dade4_002Dcaf609916f91/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PokemonGetAllTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::97C7405A-B36A-4067-8628-A24099DE715B::net8.0::PokemonAPITests.PokemonTests.PokemonGetAllTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
