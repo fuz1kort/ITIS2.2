@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PokemonsAPI.Models;
 using PokemonsAPI.Services.PokemonApiService;
@@ -32,8 +33,7 @@ public sealed class PokemonController : ControllerBase
     public async Task<IActionResult> GetAll(int limit, int offset)
     {
         var pokemonDataDtoList = await _pokeApiService.GetByFilterAsync("", limit, offset);
-        return Ok(new { results = pokemonDataDtoList });
-        
+        return Ok(pokemonDataDtoList);
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public sealed class PokemonController : ControllerBase
     [Route("{filter}")]
     public async Task<IActionResult> GetByFilter(int limit, int offset, string filter)
     {
-        var pokemonDataDtoList = await _pokeApiService.GetByFilterAsync(filter);
-        return Ok(new { results = pokemonDataDtoList });
+        var pokemonsListDataDto = await _pokeApiService.GetByFilterAsync(filter);
+        return Ok(pokemonsListDataDto);
     }
     
     /// <summary>
@@ -65,6 +65,6 @@ public sealed class PokemonController : ControllerBase
         if (pokemonDataDto is null)
             return NotFound();
  
-        return Ok(new { results = pokemonDataDto });
+        return Ok(pokemonDataDto);
     }
 }

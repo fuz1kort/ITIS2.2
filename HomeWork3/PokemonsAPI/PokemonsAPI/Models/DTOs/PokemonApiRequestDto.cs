@@ -1,4 +1,6 @@
-﻿namespace PokemonsAPI.Models.DTOs;
+﻿using System.Collections.Generic;
+
+namespace PokemonsAPI.Models.DTOs;
 
 /// <summary>
 /// 

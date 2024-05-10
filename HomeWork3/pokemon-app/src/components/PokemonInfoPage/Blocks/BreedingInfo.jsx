@@ -1,15 +1,13 @@
-const BreedingInfo = (props) => {
-    if (!props) {
+const BreedingInfo = ({weight, height}) => {
+    if (!weight && !height) {
         return <div></div>
     }
-
-    let weight = props.weight
-    let height = props.height
+    
     const meters = (height / 10).toFixed(1);
     const feet = Math.floor(meters / 0.3048);
     const inches = Number((meters / 0.3048 - feet).toFixed(1).toString().split('.')[1]);
     const inchesStr = (inches < 10) ? `0${inches}` : `${inches}`;
-    let feetAndInches = '';
+    let feetAndInches;
     if (inches === 0) {
         feetAndInches = `${feet}'`
     } else if (feet === 0) {

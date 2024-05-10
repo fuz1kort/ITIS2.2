@@ -3,6 +3,7 @@ import SearchHeader from "../components/SearchPokemonPage/SearchHeader";
 import React, {useEffect, useState} from "react";
 import PokemonsList from "../components/SearchPokemonPage/PokemonsList";
 import NotFound from "../components/SearchPokemonPage/NotFound";
+import loadPokemonsByFilter from "../utils/loadPokemonsByFilter";
 
 const SearchPage = () => {
     const [allPokemons, setAllPokemons] = useState([]);
@@ -28,15 +29,29 @@ const SearchPage = () => {
 
     useEffect(() => {
             if (fetching) {
-                fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`)
-                    .then(response => response.json())
+                loadPokemonsByFilter(20, offset, searchText)
                     .then(data => {
-                        data.results.map(pokemon => fetchPokemonData(pokemon));
+                        data.map(pokemon => {
+                            if (searchText && pokemon.name.includes(searchText.toLowerCase())) {
+                                setSearchResults(prevAllPokemons => ({
+                                    ...prevAllPokemons,
+                                    [pokemon.id]: pokemon
+                                }))
+                            } else {
+                                setAllPokemons(prevAllPokemons => ({
+                                    ...prevAllPokemons,
+                                    [pokemon.id]: pokemon
+                                }));
+                            }
+                        });
                         setOffset(prevOffset => prevOffset + 10)
                         checkIfFetchingNeeded()
                     })
                     .catch(error => console.error('Error fetching initial data:', error));
             }
+            
+            
+           
         }, [fetching, offset]
     )
 
@@ -63,28 +78,7 @@ const SearchPage = () => {
             }
         }
     };
-
-    const fetchPokemonData = (pokemon) => {
-        fetch(pokemon.url)
-            .then(response => response.json())
-            .then(pokemonData => {
-                    if (searchText && pokemonData.name.includes(searchText.toLowerCase())) {
-                        setSearchResults(prevAllPokemons => ({
-                            ...prevAllPokemons,
-                            [pokemonData.id]: pokemonData
-                        }))
-                    } else {
-                        setAllPokemons(prevAllPokemons => ({
-                            ...prevAllPokemons,
-                            [pokemonData.id]: pokemonData
-                        }));
-                    }
-
-                }
-            )
-            .catch(error => console.error('Error fetching data for', pokemon.name, ':', error))
-    };
-
+    
     const handleChange = event => {
         setSearchText(event.target.value);
     };

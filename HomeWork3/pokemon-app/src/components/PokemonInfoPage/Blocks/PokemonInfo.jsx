@@ -44,7 +44,7 @@ const PokemonInfo = ({pokemon}) => {
                             </div>
                         </div>
                     </div>
-                    <img className="pokemon-general-info-image" src={pokemon.sprites.other.home.front_default} alt="Pokemon"/>
+                    <img className="pokemon-general-info-image" src={pokemon.sprites.other.home.front_Default} alt="Pokemon"/>
                 </div>
             </div>
         </div>

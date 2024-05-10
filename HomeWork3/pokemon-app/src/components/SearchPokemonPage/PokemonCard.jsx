@@ -19,7 +19,7 @@ const PokemonCard = ({pokemon}) => {
                     </div>
                 </div>
                 <div className="card-content">
-                    <img alt={pokemon.name} className="card-image" src={pokemon.sprites.other.home.front_default}/>
+                    <img alt={pokemon.name} className="card-image" src={pokemon.sprites.other.home.front_Default}/>
                 </div>
                 <div className="card-footer">
                     <PokemonTypes types={pokemon.types}/>

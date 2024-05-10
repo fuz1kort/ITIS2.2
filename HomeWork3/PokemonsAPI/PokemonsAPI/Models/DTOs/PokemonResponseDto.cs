@@ -1,4 +1,6 @@
-﻿namespace PokemonsAPI.Models.DTOs;
+﻿using System.Collections.Generic;
+
+namespace PokemonsAPI.Models.DTOs;
 
 /// <summary>
 /// пхпх
@@ -9,14 +11,17 @@ public class PokemonResponseDto
     /// 
     /// </summary>
     public int Id { get; set; }
+    
     /// <summary>
     /// 
     /// </summary>
     public string Name { get; set; } = "";
+    
     /// <summary>
     /// 
     /// </summary>
     public SpriteInfoDto Sprites { get; set; } = null!;
+    
     /// <summary>
     /// 
     /// </summary>

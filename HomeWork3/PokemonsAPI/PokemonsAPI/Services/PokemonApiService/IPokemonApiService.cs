@@ -1,4 +1,6 @@
-﻿using PokemonsAPI.Models.DTOs;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using PokemonsAPI.Models.DTOs;
 
 namespace PokemonsAPI.Services.PokemonApiService;
 
@@ -14,12 +16,12 @@ public interface IPokemonApiService
     /// <param name="limit"></param>
     /// <param name="filter">Used for filter</param>
     /// <returns>List of <see cref="PokemonResponseDto"/></returns>
-    Task<List<PokemonResponseDto>> GetByFilterAsync(string filter = "", int limit = 70, int offset = 0);
+    Task<List<PokemonResponseDto>> GetByFilterAsync(string filter = "", int limit = 20, int offset = 0);
     
     /// <summary>
     ///
     /// </summary>
     /// <param name="idOrName">Id or Name used for search</param>
-    /// <returns><see cref="PokemonDetailedDto"/></returns>
-    Task<PokemonDetailedDto?> GetByIdOrNameAsync(string idOrName);
+    /// <returns><see cref="PokemonDetailedResponseDto"/></returns>
+    Task<PokemonDetailedResponseDto?> GetByIdOrNameAsync(string idOrName);
 }
