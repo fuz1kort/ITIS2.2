@@ -23,7 +23,7 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddScoped<IPokemonDbContextSeeder, PokemonDbContextSeeder>();
 
 builder.Services.AddDbContext<IPokemonDbContext, PokemonDbContext>(options =>
-    options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddCors(options =>
 {

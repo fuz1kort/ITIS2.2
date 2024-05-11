@@ -33,7 +33,7 @@ public class PokemonApiService(IPokemonDbContext pokemonDbContext) : IPokemonApi
         Pokemon? pokemon;
         if (int.TryParse(idOrName, out var id))
         {
-            pokemon = await pokemonDbContext.Pokemons.FirstOrDefaultAsync(x => x.Id == id,
+            pokemon = await pokemonDbContext.Pokemons.FirstOrDefaultAsync(x => x.Id.Equals(id),
                 cancellationToken: cancellationToken);
         }
         else

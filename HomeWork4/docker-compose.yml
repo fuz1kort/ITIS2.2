@@ -1,0 +1,21 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.4'
+
+services:
+  pokemonsapiweb:
+    image: pokemonsapiweb
+    build:
+      context: .
+      dockerfile: PokemonsAPI/PokemonsAPI.WEB/Dockerfile
+    ports:
+      - 5121:5121
+  pokemonapp:
+    image: pokemonapp
+    build:
+      context: ./pokemon-app
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=server=localhost;user=sa;password=Passw0rd;database=PokeApi;trustServerCertificate=true;
+    ports:
+      - 3000:3000

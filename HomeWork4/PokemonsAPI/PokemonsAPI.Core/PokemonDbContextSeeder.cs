@@ -19,11 +19,12 @@ public class PokemonDbContextSeeder(IPokemonDbContext context) : IPokemonDbConte
     {
         var info = await GetFromApi<PokemonsInfo>(PokemonApiUrl, cancellationToken);
 
-        var pokemonsNamesFromDb = context.Pokemons.Select(pokemon => pokemon.Name);
+        var pokemonsNamesFromDb = context.Pokemons.Select(pokemon => pokemon.Name)
+            .ToHashSet();
 
         var newPokemons = info.Pokemons.Where(x =>
             !pokemonsNamesFromDb.Contains(x.PokemonName));
-
+        
         foreach (var pokemonInfo in newPokemons)
         {
             var pokemon = await GetFromApi<PokemonFromApi>(pokemonInfo.PokemonUrl, cancellationToken)
@@ -63,11 +64,11 @@ public class PokemonDbContextSeeder(IPokemonDbContext context) : IPokemonDbConte
         return result;
     }
 
-    private Pokemon MapFromPokemonFromApi(PokemonFromApi pokemon)
+    private static Pokemon MapFromPokemonFromApi(PokemonFromApi pokemon)
     {
         var result = new Pokemon
         {
-            Id = pokemon.Id,
+            Id = Guid.NewGuid(),
             Name = pokemon.Name,
             ImageUrl = pokemon.Sprites.Other.Home.Front_Default
         };
@@ -87,15 +88,6 @@ public class PokemonDbContextSeeder(IPokemonDbContext context) : IPokemonDbConte
                 PokemonId = result.Id,
                 AbilityName = x.AbilityValue.AbilityName
             }).ToList();
-        
-        result.Types = pokemon.Types.Select(x =>
-            new Type
-            {
-                Id = Guid.NewGuid(),
-                PokemonId = result.Id,
-                TypeName = x.TypeValue.TypeName
-            }
-        ).ToList();
 
         result.Moves = pokemon.Moves.Select(x =>
             new Move
@@ -113,6 +105,15 @@ public class PokemonDbContextSeeder(IPokemonDbContext context) : IPokemonDbConte
                 PokemonId = result.Id,
                 StatValue = x.BaseStat,
                 StatName = x.StatValue.StatName
+            }
+        ).ToList();
+
+        result.Types = pokemon.Types.Select(x =>
+            new Type
+            {
+                Id = Guid.NewGuid(),
+                PokemonId = result.Id,
+                TypeName = x.TypeValue.TypeName
             }
         ).ToList();
 
