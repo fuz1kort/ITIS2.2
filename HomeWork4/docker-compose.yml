@@ -8,14 +8,23 @@ services:
     build:
       context: .
       dockerfile: PokemonsAPI/PokemonsAPI.WEB/Dockerfile
+    environment:
+      - DB_CONNECTION_STRING=Server=localhost,1444;User=sa;Password=Passw0rd;database=PokeApi;trustServerCertificate=true;
     ports:
       - 5121:5121
+    depends_on:
+      - db
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      MSSQL_SA_PASSWORD: Passw0rd
+      ACCEPT_EULA: Y
+    ports:
+      - 1444:1433
   pokemonapp:
     image: pokemonapp
     build:
       context: ./pokemon-app
       dockerfile: Dockerfile
-    environment:
-      - ConnectionStrings__DefaultConnection=server=localhost;user=sa;password=Passw0rd;database=PokeApi;trustServerCertificate=true;
     ports:
-      - 3000:3000
+      - 3005:3000
