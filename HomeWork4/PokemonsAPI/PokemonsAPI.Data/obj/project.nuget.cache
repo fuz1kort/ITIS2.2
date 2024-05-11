@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CWTsQdYEHVlb+jBWfVAT3pkShbR1MCkdwGnCgz5wkDVVkFrcGJcmRKXe+ouRrWBxgoMGY3QxaT86QZATIfbMvA==",
+  "dgSpecHash": "8JUwyuPLNtHMRIbmuhZ6r72IwRDqEnJPJwsn2J/iV1qMjGOa/nNHxrS9QiL8cY+5bpV0u1BOkr0/jdPv5I5CDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gafar\\source\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.Data\\PokemonsAPI.Data.csproj",
+  "projectFilePath": "C:\\Users\\gafar\\source\\repos\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.Data\\PokemonsAPI.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gafar\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\gafar\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
