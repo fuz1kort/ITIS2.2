@@ -2,10 +2,8 @@ using System.Net;
 using LiveStreamingServerNet;
 using LiveStreamingServerNet.Flv.Installer;
 using LiveStreamingServerNet.Networking.Helpers;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TeamHost.Application;
-using TeamHost.Domain.Entities;
 using TeamHost.Infrastructure;
 using TeamHost.Persistence;
 using TeamHost.Persistence.Context;
@@ -21,7 +19,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<EfContext>(opt =>
-    opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")))
+    opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
@@ -57,8 +55,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
-app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "MyArea",

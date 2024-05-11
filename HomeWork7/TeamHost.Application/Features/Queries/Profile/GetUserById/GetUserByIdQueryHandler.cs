@@ -1,9 +1,7 @@
 using MediatR;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TeamHost.Application.Contracts.Profile.GetUserById;
 using TeamHost.Application.Interfaces;
-using TeamHost.Domain.Entities;
 
 namespace TeamHost.Application.Features.Queries.Profile.GetUserById;
 

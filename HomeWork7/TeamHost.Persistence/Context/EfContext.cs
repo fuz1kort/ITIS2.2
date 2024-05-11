@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TeamHost.Application.Interfaces;
 using TeamHost.Domain.Entities;
@@ -7,7 +5,7 @@ using TeamHost.Persistence.Configurations;
 
 namespace TeamHost.Persistence.Context;
 
-public class EfContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>, IDbContext
+public class EfContext : DbContext, IDbContext
 {
     public EfContext(DbContextOptions<EfContext> options)
         : base(options)
@@ -28,6 +26,9 @@ public class EfContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>, IDbC
 
     /// <inheritdoc />
     public DbSet<MediaFile> MediaFiles { get; set; }
+
+    /// <inheritdoc />
+    public DbSet<User> Users { get; set; }
 
     /// <inheritdoc />
     public DbSet<UserInfo> UserInfos { get; set; }
