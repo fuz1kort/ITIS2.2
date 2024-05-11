@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeamHost.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c89355e392bce5d7483fad15922de85eb1f70d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fdc0ec72e76cd4f52322d71949c4f9e9cddaf818")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeamHost.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeamHost.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
