@@ -2,29 +2,41 @@
 
 version: '3.4'
 
+networks:
+  my-network:
+    driver: bridge
+
 services:
   pokemonsapiweb:
-    image: pokemonsapiweb
+    image: pokemon-api:local
+    container_name: pokemon-back
     build:
       context: .
       dockerfile: PokemonsAPI/PokemonsAPI.WEB/Dockerfile
-    environment:
-      - DB_CONNECTION_STRING=Server=localhost,1444;User=sa;Password=Passw0rd;database=PokeApi;trustServerCertificate=true;
     ports:
-      - 5121:5121
+      - "8080:5121"
     depends_on:
       - db
+    networks:
+      - my-network
   db:
-    image: mcr.microsoft.com/mssql/server:2022-latest
+    image: postgres
+    restart: always
+    container_name: pokemon-psql
     environment:
-      MSSQL_SA_PASSWORD: Passw0rd
-      ACCEPT_EULA: Y
+      - POSTGRES_DB=PokeApi
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     ports:
-      - 1444:1433
+      - "5432:5432"
+    networks:
+      - my-network
   pokemonapp:
-    image: pokemonapp
+    image: pokemonapp:local
     build:
       context: ./pokemon-app
       dockerfile: Dockerfile
     ports:
-      - 3005:3000
+      - "3000:3000"
+    networks:
+      - my-network

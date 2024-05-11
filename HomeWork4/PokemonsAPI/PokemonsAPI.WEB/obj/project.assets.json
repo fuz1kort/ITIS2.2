@@ -946,6 +946,41 @@
           }
         }
       },
+      "Npgsql/8.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL/8.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.2",
+          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.2",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.2",
+          "Npgsql": "8.0.2"
+        },
+        "compile": {
+          "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.5.0": {
         "type": "package",
         "dependencies": {
@@ -1642,6 +1677,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.4",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.2",
           "PokemonsAPI.Core": "1.0.0"
         },
         "compile": {
@@ -3362,6 +3398,44 @@
         "packageIcon.png"
       ]
     },
+    "Npgsql/8.0.2": {
+      "sha512": "MuJzLoWCaQhQAR3oh66YR0Ir6mxuezncGX3f8wxvAc21g0+9HICktJQlqMoODhxztZKXE5k9GxRxqUAN+vPb4g==",
+      "type": "package",
+      "path": "npgsql/8.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net6.0/Npgsql.dll",
+        "lib/net6.0/Npgsql.xml",
+        "lib/net7.0/Npgsql.dll",
+        "lib/net7.0/Npgsql.xml",
+        "lib/net8.0/Npgsql.dll",
+        "lib/net8.0/Npgsql.xml",
+        "lib/netstandard2.0/Npgsql.dll",
+        "lib/netstandard2.0/Npgsql.xml",
+        "lib/netstandard2.1/Npgsql.dll",
+        "lib/netstandard2.1/Npgsql.xml",
+        "npgsql.8.0.2.nupkg.sha512",
+        "npgsql.nuspec",
+        "postgresql.png"
+      ]
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL/8.0.2": {
+      "sha512": "eoZPynwkZTWFTgnocvXORuCL2yFZtscrUdqVhjxiRULpC7BMg9zhLM5oDZAU5PoX1PgN77hmkKE4a3PQiHqh7Q==",
+      "type": "package",
+      "path": "npgsql.entityframeworkcore.postgresql/8.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll",
+        "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.xml",
+        "npgsql.entityframeworkcore.postgresql.8.0.2.nupkg.sha512",
+        "npgsql.entityframeworkcore.postgresql.nuspec",
+        "postgresql.png"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.5.0": {
       "sha512": "FK05XokgjgwlCI6wCT+D4/abtQkL1X1/B9Oas6uIwHFmYrIO9WUD5aLC9IzMs9GnHfUXOtXZ2S43gN1mhs5+aA==",
       "type": "package",
@@ -4643,30 +4717,26 @@
       "Microsoft.EntityFrameworkCore.Design >= 8.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.4",
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.2",
       "PokemonsAPI.Core >= 1.0.0",
       "PokemonsAPI.Data >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gafar\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gafar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gafar\\source\\repos\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.WEB\\PokemonsAPI.WEB.csproj",
+      "projectUniqueName": "C:\\Users\\gafar\\source\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.WEB\\PokemonsAPI.WEB.csproj",
       "projectName": "PokemonsAPI.WEB",
-      "projectPath": "C:\\Users\\gafar\\source\\repos\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.WEB\\PokemonsAPI.WEB.csproj",
+      "projectPath": "C:\\Users\\gafar\\source\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.WEB\\PokemonsAPI.WEB.csproj",
       "packagesPath": "C:\\Users\\gafar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gafar\\source\\repos\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.WEB\\obj\\",
+      "outputPath": "C:\\Users\\gafar\\source\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.WEB\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\gafar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4674,18 +4744,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\gafar\\source\\repos\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.Core\\PokemonsAPI.Core.csproj": {
-              "projectPath": "C:\\Users\\gafar\\source\\repos\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.Core\\PokemonsAPI.Core.csproj"
+            "C:\\Users\\gafar\\source\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.Core\\PokemonsAPI.Core.csproj": {
+              "projectPath": "C:\\Users\\gafar\\source\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.Core\\PokemonsAPI.Core.csproj"
             },
-            "C:\\Users\\gafar\\source\\repos\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.Data\\PokemonsAPI.Data.csproj": {
-              "projectPath": "C:\\Users\\gafar\\source\\repos\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.Data\\PokemonsAPI.Data.csproj"
+            "C:\\Users\\gafar\\source\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.Data\\PokemonsAPI.Data.csproj": {
+              "projectPath": "C:\\Users\\gafar\\source\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.Data\\PokemonsAPI.Data.csproj"
             }
           }
         }
@@ -4694,6 +4763,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4724,6 +4798,10 @@
             "target": "Package",
             "version": "[8.0.4, )"
           },
+          "Npgsql.EntityFrameworkCore.PostgreSQL": {
+            "target": "Package",
+            "version": "[8.0.2, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.5.0, )"
@@ -4748,7 +4826,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

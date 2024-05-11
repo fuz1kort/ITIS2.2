@@ -286,3 +286,5 @@ C:\Users\gafar\source\repos\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.W
 C:\Users\gafar\source\repos\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.WEB\obj\Debug\net8.0\PokemonsAPI.WEB.pdb
 C:\Users\gafar\source\repos\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.WEB\obj\Debug\net8.0\PokemonsAPI.WEB.genruntimeconfig.cache
 C:\Users\gafar\source\repos\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.WEB\obj\Debug\net8.0\ref\PokemonsAPI.WEB.dll
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.WEB\bin\Debug\net8.0\Npgsql.dll
+C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.WEB\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

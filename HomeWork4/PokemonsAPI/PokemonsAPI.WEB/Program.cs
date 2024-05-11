@@ -22,8 +22,9 @@ builder.Services.AddSwaggerGen(options =>
 
 builder.Services.AddScoped<IPokemonDbContextSeeder, PokemonDbContextSeeder>();
 
+var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
 builder.Services.AddDbContext<IPokemonDbContext, PokemonDbContext>(options =>
-    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddCors(options =>
 {

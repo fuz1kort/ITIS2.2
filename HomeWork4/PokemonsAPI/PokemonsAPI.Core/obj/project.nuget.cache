@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "70bb64nQ7OrNS3TxZyVRlIXNLTXm8ga73U8m+e9wMHmRYQ+Il45x+gcUlVkl3VWLDvqWe4IZgLAgXxPHpap/cg==",
+  "dgSpecHash": "By0t1HISuOQbYmXnSmCNhkJRnlgsJHetNxbGLsY6Nh+6KjuTWy/wedpjRGguk52ep3+CyXmh5PoPv4iUKess5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gafar\\source\\repos\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.Core\\PokemonsAPI.Core.csproj",
+  "projectFilePath": "C:\\Users\\gafar\\source\\fuz1kort\\ITIS2.2\\HomeWork4\\PokemonsAPI\\PokemonsAPI.Core\\PokemonsAPI.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gafar\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\gafar\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

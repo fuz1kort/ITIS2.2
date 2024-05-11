@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PokemonsAPI.Core
-build_property.ProjectDir = c:\Users\gafar\source\repos\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\
+build_property.ProjectDir = C:\Users\gafar\source\fuz1kort\ITIS2.2\HomeWork4\PokemonsAPI\PokemonsAPI.Core\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
