@@ -17,7 +17,7 @@ public interface IPokemonApiService
     /// <param name="filter">Used for filter</param>
     /// <returns>List of <see cref="PokemonResponseDto"/></returns>
     Task<List<PokemonResponseDto>> GetByFilterAsync(string filter = "", int limit = 20, int offset = 0);
-    
+
     /// <summary>
     ///
     /// </summary>
