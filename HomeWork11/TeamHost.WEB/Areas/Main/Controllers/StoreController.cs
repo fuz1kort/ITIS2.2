@@ -4,7 +4,6 @@ using Microsoft.Extensions.Caching.Distributed;
 using TeamHost.Application.Contracts.Games.GetAllGames;
 using TeamHost.Application.Features.Queries.Game.GetAllGames;
 using TeamHost.Application.Features.Queries.Game.GetByIdGame;
-using TeamHost.Application.Interfaces;
 using TeamHost.Infrastructure.Services;
 
 namespace TeamHost.Areas.Main.Controllers
@@ -13,7 +12,7 @@ namespace TeamHost.Areas.Main.Controllers
     public class StoreController : Controller
     {
         private readonly IMediator _mediator;
-        private IDistributedCache _cache;
+        private readonly IDistributedCache _cache;
 
         public StoreController(IMediator mediator, IDistributedCache cache)
         {
@@ -21,7 +20,7 @@ namespace TeamHost.Areas.Main.Controllers
             _cache = cache;
         }
 
-        [HttpGet]
+        [HttpGet("index")]
         public async Task<IActionResult> Index()
         {
             var cachedResult = await _cache.GetRecordAsync<GetAllGamesResponse>("all_games");
@@ -35,7 +34,7 @@ namespace TeamHost.Areas.Main.Controllers
             return View(result);
         }
 
-        [HttpGet("card-store/{id}")]
+        [HttpGet("card-store/{id:guid}")]
         public async Task<IActionResult> Details(
             [FromRoute] Guid id,
             CancellationToken cancellationToken)

@@ -1,5 +1,3 @@
-using TeamHost.Domain.Entities;
-
 namespace TeamHost.Application.Contracts.Profile.PostRegister;
 
 /// <summary>

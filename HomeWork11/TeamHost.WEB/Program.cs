@@ -10,7 +10,6 @@ using TeamHost.Cors;
 using TeamHost.Domain.Entities;
 using TeamHost.Hub;
 using TeamHost.Infrastructure;
-using TeamHost.Infrastructure.Services;
 using TeamHost.Persistence;
 using TeamHost.Persistence.Context;
 using TeamHost.Persistence.Extensions;
@@ -98,12 +97,11 @@ app.UseAuthorization();
 
 app.MapHub<ChatHub>("ws/chat");
 app.MapControllerRoute(
-    name: "MyArea",
+    name: "HomeArea",
     pattern: "{area=Home}/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "GetChatDetail",
-    pattern: "{area=Account}/{controller=Chat}/{action=GetChatDetail}/{id?}"
-);
+    pattern: "{area=Account}/{controller=Chat}/{action=GetChatDetail}/{id?}");
 
 app.Run();

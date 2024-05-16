@@ -12,8 +12,8 @@ public class LiveController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> SendStreamUrl(string streamUrl)
+    public Task<IActionResult> SendStreamUrl(string streamUrl)
     {
-        return Ok();
+        return Task.FromResult<IActionResult>(Ok());
     }
 }

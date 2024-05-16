@@ -18,8 +18,8 @@
                 <div class="user-info">
                     <div class="user-info__avatar"><img src="~/img/profile.png" alt="profile"></div>
                     <div class="user-info__box">
-                        <div class="user-info__title">@Model?.LastName @Model?.FirstName @Model?.Patronymic</div>
-                        <div class="user-info__text">Birthday: @hasBirthday Country: @Model?.Country?.Name</div>
+                        <div class="user-info__title">@Model.LastName @Model.FirstName @Model.Patronymic</div>
+                        <div class="user-info__text">Birthday: @hasBirthday Country: @Model.Country?.Name</div>
                     </div>
                 </div>
                 <a
@@ -36,12 +36,12 @@
                 <h3 class="uk-text-lead">Bio</h3>
             </div>
             <div class="widjet__body">
-                <span>@Model?.About</span>
+                <span>@Model.About</span>
             </div>
         </div>
         <div class="widjet --activity">
             <div class="widjet__head">
-                <h3 class="uk-text-lead">Recent Activity</h3><a href="#!">View All</a>
+                <h3 class="uk-text-lead">Recent Activity</h3><a href="#">View All</a>
             </div>
             <div class="widjet__body">
                 <div class="widjet-game">

@@ -50,6 +50,21 @@ public interface IDbContext
     /// Сообщения
     /// </summary>
     public DbSet<Messages> Messages { get; set; }
+    
+    /// <summary>
+    /// Кошельки
+    /// </summary>
+    public DbSet<Wallet> Wallets { get; set; }
+    
+    /// <summary>
+    /// Покупки
+    /// </summary>
+    public DbSet<Purchase> Purchases { get; set; }
+    
+    /// <summary>
+    /// Транзакции
+    /// </summary>
+    public DbSet<Transaction> Transactions { get; set; }
 
     /// <summary>
     /// Метод сохранения

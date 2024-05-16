@@ -1,14 +1,14 @@
 using Microsoft.AspNetCore.Http;
 
-namespace TeamHost.Application.Contracts.Profile.EditProfile;
+namespace TeamHost.Application.Contracts.Profile.PutEditProfile;
 
-public class EditProfileRequest
+public class PutEditProfileRequest
 {
-    public EditProfileRequest()
+    public PutEditProfileRequest()
     {
     }
 
-    public EditProfileRequest(EditProfileRequest request)
+    public PutEditProfileRequest(PutEditProfileRequest request)
     {
         FirstName = request.FirstName;
         LastName = request.LastName;
@@ -17,6 +17,7 @@ public class EditProfileRequest
         Birthday = request.Birthday;
         Country = request.Country;
         ProfileImage = request.ProfileImage;
+        Wallet = request.Wallet;
     }
     
     /// <summary>
@@ -53,4 +54,9 @@ public class EditProfileRequest
     /// Страна
     /// </summary>
     public Guid? Country { get; set; }
+    
+    /// <summary>
+    /// Кошелёк
+    /// </summary>
+    public Domain.Entities.Wallet Wallet { get; set; }
 }

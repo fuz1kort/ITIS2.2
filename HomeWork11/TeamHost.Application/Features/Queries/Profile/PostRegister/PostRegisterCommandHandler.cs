@@ -53,6 +53,7 @@ public class PostRegisterCommandHandler : IRequestHandler<PostRegisterCommand, P
                     Name = "Страна мафиози"
                 },
             },
+            Wallet = new Domain.Entities.Wallet()
         };
         
         var result = await _userManager
@@ -68,6 +69,8 @@ public class PostRegisterCommandHandler : IRequestHandler<PostRegisterCommand, P
             };
 
         await _signInManager.SignInAsync(user, false);
+        
+        
         
         return new PostRegisterResponse
         {

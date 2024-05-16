@@ -39,7 +39,7 @@ public class GetChatsQueryHandler : IRequestHandler<GetChatsQuery, List<GetChats
                             .OrderByDescending(m => m.CreatedDate)
                             .FirstOrDefault()
                     })
-            .OrderByDescending(result => result!.Messages!.CreatedDate)
+            .OrderByDescending(result => result.Messages!.CreatedDate)
             .Select(result => new GetChatsResponse
             {
                 IsGroup = result.Chat.UserInfos.Count > 2,

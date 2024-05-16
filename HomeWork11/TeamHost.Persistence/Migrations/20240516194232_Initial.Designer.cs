@@ -12,7 +12,7 @@ using TeamHost.Persistence.Context;
 namespace TeamHost.Persistence.Migrations
 {
     [DbContext(typeof(EfContext))]
-    [Migration("20240516112536_Initial")]
+    [Migration("20240516194232_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace TeamHost.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.11")
+                .HasAnnotation("ProductVersion", "7.0.18")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -470,6 +470,57 @@ namespace TeamHost.Persistence.Migrations
                     b.ToTable("Platform");
                 });
 
+            modelBuilder.Entity("TeamHost.Domain.Entities.Purchase", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<decimal>("Amount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("decimal(18,2)")
+                        .HasDefaultValue(0m);
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("GameId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("WalletId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GameId");
+
+                    b.HasIndex("WalletId");
+
+                    b.ToTable("Purchases");
+                });
+
+            modelBuilder.Entity("TeamHost.Domain.Entities.Transaction", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("WalletId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("WalletId");
+
+                    b.ToTable("Transactions");
+                });
+
             modelBuilder.Entity("TeamHost.Domain.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -577,6 +628,28 @@ namespace TeamHost.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("UserInfos");
+                });
+
+            modelBuilder.Entity("TeamHost.Domain.Entities.Wallet", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<decimal>("Balance")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("decimal(18,2)")
+                        .HasDefaultValue(0m);
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("Wallets");
                 });
 
             modelBuilder.Entity("CategoryGame", b =>
@@ -746,6 +819,36 @@ namespace TeamHost.Persistence.Migrations
                     b.Navigation("MediaFile");
                 });
 
+            modelBuilder.Entity("TeamHost.Domain.Entities.Purchase", b =>
+                {
+                    b.HasOne("TeamHost.Domain.Entities.Game", "Game")
+                        .WithMany()
+                        .HasForeignKey("GameId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TeamHost.Domain.Entities.Wallet", "Wallet")
+                        .WithMany("Purchases")
+                        .HasForeignKey("WalletId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Game");
+
+                    b.Navigation("Wallet");
+                });
+
+            modelBuilder.Entity("TeamHost.Domain.Entities.Transaction", b =>
+                {
+                    b.HasOne("TeamHost.Domain.Entities.Wallet", "Wallet")
+                        .WithMany("Transactions")
+                        .HasForeignKey("WalletId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Wallet");
+                });
+
             modelBuilder.Entity("TeamHost.Domain.Entities.UserInfo", b =>
                 {
                     b.HasOne("TeamHost.Domain.Entities.Country", "Country")
@@ -765,6 +868,17 @@ namespace TeamHost.Persistence.Migrations
                     b.Navigation("Country");
 
                     b.Navigation("Image");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("TeamHost.Domain.Entities.Wallet", b =>
+                {
+                    b.HasOne("TeamHost.Domain.Entities.User", "User")
+                        .WithOne("Wallet")
+                        .HasForeignKey("TeamHost.Domain.Entities.Wallet", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
@@ -800,6 +914,15 @@ namespace TeamHost.Persistence.Migrations
                 {
                     b.Navigation("UserInfo")
                         .IsRequired();
+
+                    b.Navigation("Wallet");
+                });
+
+            modelBuilder.Entity("TeamHost.Domain.Entities.Wallet", b =>
+                {
+                    b.Navigation("Purchases");
+
+                    b.Navigation("Transactions");
                 });
 #pragma warning restore 612, 618
         }

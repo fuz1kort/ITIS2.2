@@ -1,5 +1,3 @@
-using TeamHost.Domain.Common;
-
 namespace TeamHost.Application.Contracts.Games.GetAllGames;
 
 /// <summary>

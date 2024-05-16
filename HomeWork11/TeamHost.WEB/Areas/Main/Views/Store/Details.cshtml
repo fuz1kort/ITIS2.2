@@ -87,12 +87,12 @@
                     {
                         <div class="game-card__platform"><i class="ico_windows"></i><i class="ico_apple"></i></div>
                     }
-                    else if (Model.Platforms?.Any(x => x.Equals("Apple", StringComparison.OrdinalIgnoreCase)) == true
+                    else if (Model.Platforms.Any(x => x.Equals("Apple", StringComparison.OrdinalIgnoreCase))
                              && Model.Platforms.Count != 1)
                     {
                         <div class="game-card__platform"><i class="ico_apple"></i></div>
                     }
-                    else if (Model.Platforms?.Any(x => x.Equals("Windows", StringComparison.OrdinalIgnoreCase)) == true
+                    else if (Model.Platforms.Any(x => x.Equals("Windows", StringComparison.OrdinalIgnoreCase))
                              && Model.Platforms.Count != 1)
                     {
                         <div class="game-card__platform"><i class="ico_windows"></i></div>

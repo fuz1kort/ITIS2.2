@@ -2,13 +2,13 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using TeamHost.Application.Contracts.Profile.EditProfile;
 using TeamHost.Application.Contracts.Profile.PostLogin;
 using TeamHost.Application.Contracts.Profile.PostRegister;
-using TeamHost.Application.Features.Queries.Profile.EditProfile;
+using TeamHost.Application.Contracts.Profile.PutEditProfile;
 using TeamHost.Application.Features.Queries.Profile.GetUserById;
 using TeamHost.Application.Features.Queries.Profile.PostLogin;
 using TeamHost.Application.Features.Queries.Profile.PostRegister;
+using TeamHost.Application.Features.Queries.Profile.PutEditProfile;
 using TeamHost.Application.Interfaces;
 using TeamHost.Domain.Entities;
 
@@ -49,14 +49,14 @@ public class ProfileController : Controller
 
     [Authorize]
     [HttpGet]
-    public async Task<IActionResult> EditProfile()
+    public Task<IActionResult> EditProfile()
     {
-        return View();
+        return Task.FromResult<IActionResult>(View());
     }
     
     [Authorize]
     [HttpPost]
-    public async Task<IActionResult> EditProfile([FromForm] EditProfileRequest request)
+    public async Task<IActionResult> EditProfile([FromForm] PutEditProfileRequest request)
     {
         var result = await _mediator.Send(new PutEditProfileCommand(request));
 

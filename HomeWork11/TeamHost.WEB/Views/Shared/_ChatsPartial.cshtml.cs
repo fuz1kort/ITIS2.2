@@ -2,7 +2,7 @@
 
 namespace TeamHost.Views.Shared;
 
-public class _ChatsPartial : PageModel
+public class ChatsPartial : PageModel
 {
     public void OnGet()
     {

@@ -6,7 +6,7 @@ using TeamHost.Application.Extensions;
 using TeamHost.Application.Interfaces;
 using TeamHost.Domain.Entities;
 
-namespace TeamHost.Application.Features.Queries.Profile.EditProfile;
+namespace TeamHost.Application.Features.Queries.Profile.PutEditProfile;
 
 public class PutEditProfileCommandHandler : IRequestHandler<PutEditProfileCommand, bool>
 {
@@ -75,8 +75,6 @@ public class PutEditProfileCommandHandler : IRequestHandler<PutEditProfileComman
 
     private async Task<MediaFile?> UploadProfileImageFileAsync(IFormFile? file, CancellationToken cancellationToken)
     {
-        var profileImage = new MediaFile();
-
         if (file is null)
             return null;
         
@@ -84,11 +82,11 @@ public class PutEditProfileCommandHandler : IRequestHandler<PutEditProfileComman
         var uploadFolder = Path.Combine(_webHostEnvironment.WebRootPath, "profiles", uniqueFileName);
         var filePathForDb = $"profiles/{uniqueFileName}";
         
-        profileImage = new MediaFile
+        var profileImage = new MediaFile
         {
             Name = uniqueFileName,
             Path = filePathForDb,
-            Size = (ulong)file.Length!
+            Size = (ulong)file.Length
         };
 
         await using var fileStream = new FileStream(uploadFolder, FileMode.Create);

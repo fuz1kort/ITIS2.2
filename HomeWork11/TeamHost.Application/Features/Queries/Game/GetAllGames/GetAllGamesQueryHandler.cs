@@ -55,6 +55,6 @@ public class GetAllGamesQueryHandler
             })
             .ToListAsync(cancellationToken);
         
-        return new GetAllGamesResponse(entities: result, totalCount: totalCount);
+        return new GetAllGamesResponse(allGames: result, totalCount: totalCount);
     }
 }

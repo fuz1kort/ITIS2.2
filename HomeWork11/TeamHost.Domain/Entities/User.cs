@@ -11,4 +11,9 @@ public class User : IdentityUser<Guid>
     /// Инфа пользователя
     /// </summary>
     public UserInfo UserInfo { get; set; }
+    
+    /// <summary>
+    /// Кошелёк
+    /// </summary>
+    public Wallet? Wallet { get; set; }
 }

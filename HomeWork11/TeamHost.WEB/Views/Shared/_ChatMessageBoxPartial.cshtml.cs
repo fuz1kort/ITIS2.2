@@ -2,7 +2,7 @@
 
 namespace TeamHost.Views.Shared;
 
-public class _ChatMessageBoxPartial : PageModel
+public class ChatMessageBoxPartial : PageModel
 {
     public void OnGet()
     {

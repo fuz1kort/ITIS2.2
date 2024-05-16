@@ -1,5 +1,3 @@
-using TeamHost.Domain.Entities;
-
 namespace TeamHost.Application.Contracts.Games.GetAllGames;
 
 /// <summary>
@@ -10,18 +8,18 @@ public class GetAllGamesResponse
     /// <summary>
     /// Конструктор
     /// </summary>
-    /// <param name="entities">Сущности</param>
+    /// <param name="allGames">Сущности</param>
     /// <param name="totalCount">Общее кол-во</param>
-    public GetAllGamesResponse(List<GetAllGamesResponseItem> entities, int totalCount)
+    public GetAllGamesResponse(List<GetAllGamesResponseItem> allGames, int totalCount)
     {
-        Entities = entities;
+        AllGames = allGames;
         TotalCount = totalCount;
     }
     
     /// <summary>
     /// Список
     /// </summary>
-    public List<GetAllGamesResponseItem> Entities { get; }
+    public List<GetAllGamesResponseItem> AllGames { get; }
 
     /// <summary>
     /// Общее кол-во

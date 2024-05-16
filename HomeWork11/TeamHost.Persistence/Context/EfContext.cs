@@ -38,6 +38,15 @@ public class EfContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>, IDbC
 
     /// <inheritdoc />
     public DbSet<Messages> Messages { get; set; }
+    
+    /// <inheritdoc />
+    public DbSet<Wallet> Wallets { get; set; }
+
+    /// <inheritdoc />
+    public DbSet<Purchase> Purchases { get; set; }
+    
+    /// <inheritdoc />
+    public DbSet<Transaction> Transactions { get; set; }
 
     /// <inheritdoc />
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -48,6 +57,9 @@ public class EfContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>, IDbC
         modelBuilder.ApplyConfiguration(new GameConfiguration());
         modelBuilder.ApplyConfiguration(new MediaFileConfiguration());
         modelBuilder.ApplyConfiguration(new UserInfoConfiguration());
+        modelBuilder.ApplyConfiguration(new WalletConfiguration());
+        modelBuilder.ApplyConfiguration(new PurchaseConfiguration());
+        modelBuilder.ApplyConfiguration(new TransactionConfiguration());
         
         base.OnModelCreating(modelBuilder);
     }

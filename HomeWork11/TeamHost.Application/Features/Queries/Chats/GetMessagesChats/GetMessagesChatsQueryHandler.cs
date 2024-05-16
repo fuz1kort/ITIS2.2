@@ -51,7 +51,7 @@ public class GetMessagesChatsQueryHandler
                    {
                        ChatImage = x.Chat.UserInfos.Count() > 2
                            ? x.Chat.MediaFile!.Path
-                           : x.Chat.UserInfos!
+                           : x.Chat.UserInfos
                                .FirstOrDefault(y => y.UserId != _userContext.CurrentUserId)!.Image!.Path,
                        ChatId = x.Chat.Id,
                        ChatTitle = x.Chat.UserInfos.Count > 2
